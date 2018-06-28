@@ -8,6 +8,39 @@ _user$project$App_ops['=>'] = F2(
 	function (a, b) {
 		return {ctor: '_Tuple2', _0: a, _1: b};
 	});
+var _user$project$App$padding_s = F4(
+	function (a, b, c, d) {
+		return function (x) {
+			return _elm_lang$html$Html_Attributes$style(
+				{
+					ctor: '::',
+					_0: A2(_user$project$App_ops['=>'], 'padding', x),
+					_1: {ctor: '[]'}
+				});
+		}(
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				_elm_lang$core$Basics$toString(a),
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'px ',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(b),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'px ',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(c),
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'px ',
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										_elm_lang$core$Basics$toString(d),
+										'px '))))))));
+	});
 var _user$project$App$blueBackground_s = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
@@ -277,14 +310,18 @@ var _user$project$App$view = function (model) {
 				_elm_lang$html$Html$div,
 				{
 					ctor: '::',
-					_0: _user$project$App$blueBackground_s,
+					_0: A4(_user$project$App$padding_s, 100, 0, 100, 0),
 					_1: {
 						ctor: '::',
-						_0: _user$project$App$center_s,
+						_0: _user$project$App$blueBackground_s,
 						_1: {
 							ctor: '::',
-							_0: _user$project$App$width_s(100),
-							_1: {ctor: '[]'}
+							_0: _user$project$App$center_s,
+							_1: {
+								ctor: '::',
+								_0: _user$project$App$width_s(100),
+								_1: {ctor: '[]'}
+							}
 						}
 					}
 				},

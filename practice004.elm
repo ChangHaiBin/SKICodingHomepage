@@ -14,6 +14,18 @@ import Window exposing (..)
     ( a, b )
 
 
+padding_s a b c d =
+    toString a
+        ++ "px "
+        ++ toString b
+        ++ "px "
+        ++ toString c
+        ++ "px "
+        ++ toString d
+        ++ "px "
+        |> (\x -> style [ "padding" => x ])
+
+
 blueBackground_s =
     style [ "backgroundColor" => "#3498DB" ]
 
@@ -160,7 +172,7 @@ subscriptions model =
 view : Model -> Html.Html Msg
 view model =
     div []
-        [ div [ blueBackground_s, center_s, width_s 100 ] [ jumbo ]
+        [ div [ padding_s 100 0 100 0, blueBackground_s, center_s, width_s 100 ] [ jumbo ]
         , div [ center_s, width_s 80 ] [ introduction ]
         , div [] [ "ASDF" |> text ]
         , div []
