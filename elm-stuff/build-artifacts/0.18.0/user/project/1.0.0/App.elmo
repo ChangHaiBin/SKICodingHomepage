@@ -1,0 +1,370 @@
+var _user$project$App$init = {
+	ctor: '_Tuple2',
+	_0: {x: 1, y: 1},
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _user$project$App_ops = _user$project$App_ops || {};
+_user$project$App_ops['=>'] = F2(
+	function (a, b) {
+		return {ctor: '_Tuple2', _0: a, _1: b};
+	});
+var _user$project$App$blueBackground_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'backgroundColor', '#3498DB'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$center_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'text-align', 'center'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$width_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$App_ops['=>'],
+				'width',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'%')),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$App_ops['=>'], 'margin-left', 'auto'),
+				_1: {
+					ctor: '::',
+					_0: A2(_user$project$App_ops['=>'], 'margin-right', 'auto'),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$App$whiteText_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'color', 'white'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$blackText_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'color', 'black'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$darkGrey_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'color', '#777777'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$arial_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'font-family', 'Arial'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$italic_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'font-style', 'italic'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$bold_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'font-weight', 'bold'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$backgroundStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$App_ops['=>'], 'text-align', 'center'),
+		_1: {
+			ctor: '::',
+			_0: A2(_user$project$App_ops['=>'], 'padding', '10px 0px'),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$App_ops['=>'], 'width', '100%'),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$App$size = F2(
+	function (h, padding) {
+		return _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: A2(
+					_user$project$App_ops['=>'],
+					'font-size',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(h),
+						'px')),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_user$project$App_ops['=>'],
+						'padding',
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							_elm_lang$core$Basics$toString(padding),
+							'px 0')),
+					_1: {ctor: '[]'}
+				}
+			});
+	});
+var _user$project$App$jumbo = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _user$project$App$arial_s,
+		_1: {
+			ctor: '::',
+			_0: _user$project$App$whiteText_s,
+			_1: {ctor: '[]'}
+		}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$span,
+			{
+				ctor: '::',
+				_0: A2(_user$project$App$size, 120, 16),
+				_1: {
+					ctor: '::',
+					_0: _user$project$App$italic_s,
+					_1: {
+						ctor: '::',
+						_0: _user$project$App$bold_s,
+						_1: {ctor: '[]'}
+					}
+				}
+			},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('SKI'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$span,
+				{
+					ctor: '::',
+					_0: A2(_user$project$App$size, 80, 1),
+					_1: {
+						ctor: '::',
+						_0: _user$project$App$bold_s,
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(' Coding'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: A2(_user$project$App$size, 20, 8),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Solve computer problem using Primary School Math!'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$br,
+						{ctor: '[]'},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	});
+var _user$project$App$introduction = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h3,
+			{
+				ctor: '::',
+				_0: A2(_user$project$App$size, 14, 8),
+				_1: {
+					ctor: '::',
+					_0: _user$project$App$arial_s,
+					_1: {
+						ctor: '::',
+						_0: _user$project$App$darkGrey_s,
+						_1: {ctor: '[]'}
+					}
+				}
+			},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('SKI Coding School provides math-oriented coding programs form students aged 10 to 18. Our lesons include weekly coding classes, holiday intensive course, and Math Olympiad training.'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {ctor: '[]'}
+	});
+var _user$project$App$Model = F2(
+	function (a, b) {
+		return {x: a, y: b};
+	});
+var _user$project$App$Resize = F2(
+	function (a, b) {
+		return {ctor: 'Resize', _0: a, _1: b};
+	});
+var _user$project$App$subscriptions = function (model) {
+	return _elm_lang$window$Window$resizes(
+		function (qqq) {
+			return A2(_user$project$App$Resize, qqq.height, qqq.width);
+		});
+};
+var _user$project$App$NewFace = function (a) {
+	return {ctor: 'NewFace', _0: a};
+};
+var _user$project$App$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'Roll':
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: A2(
+						_elm_lang$core$Random$generate,
+						_user$project$App$NewFace,
+						A2(_elm_lang$core$Random$int, 1, 6))
+				};
+			case 'NewFace':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{x: _p0._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				return {
+					ctor: '_Tuple2',
+					_0: {x: _p0._0, y: _p0._1},
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+		}
+	});
+var _user$project$App$Roll = {ctor: 'Roll'};
+var _user$project$App$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _user$project$App$blueBackground_s,
+					_1: {
+						ctor: '::',
+						_0: _user$project$App$center_s,
+						_1: {
+							ctor: '::',
+							_0: _user$project$App$width_s(100),
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _user$project$App$jumbo,
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: _user$project$App$center_s,
+						_1: {
+							ctor: '::',
+							_0: _user$project$App$width_s(80),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: _user$project$App$introduction,
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('ASDF'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$h1,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												_elm_lang$core$Basics$toString(model.x),
+												A2(
+													_elm_lang$core$Basics_ops['++'],
+													'----',
+													_elm_lang$core$Basics$toString(model.y)))),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$button,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Events$onClick(_user$project$App$Roll),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('Roll'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
+var _user$project$App$main = _elm_lang$html$Html$program(
+	{init: _user$project$App$init, view: _user$project$App$view, update: _user$project$App$update, subscriptions: _user$project$App$subscriptions})();
