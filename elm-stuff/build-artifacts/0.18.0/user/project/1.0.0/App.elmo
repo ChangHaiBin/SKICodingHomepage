@@ -1,180 +1,562 @@
-var _user$project$App$init = {
-	ctor: '_Tuple2',
-	_0: {x: 1, y: 1},
-	_1: _elm_lang$core$Platform_Cmd$none
-};
-var _user$project$App_ops = _user$project$App_ops || {};
-_user$project$App_ops['=>'] = F2(
-	function (a, b) {
-		return {ctor: '_Tuple2', _0: a, _1: b};
-	});
-var _user$project$App$padding_s = F4(
-	function (a, b, c, d) {
-		return function (x) {
-			return _elm_lang$html$Html_Attributes$style(
-				{
-					ctor: '::',
-					_0: A2(_user$project$App_ops['=>'], 'padding', x),
-					_1: {ctor: '[]'}
-				});
-		}(
-			A2(
-				_elm_lang$core$Basics_ops['++'],
-				_elm_lang$core$Basics$toString(a),
-				A2(
-					_elm_lang$core$Basics_ops['++'],
-					'px ',
-					A2(
-						_elm_lang$core$Basics_ops['++'],
-						_elm_lang$core$Basics$toString(b),
-						A2(
-							_elm_lang$core$Basics_ops['++'],
-							'px ',
-							A2(
-								_elm_lang$core$Basics_ops['++'],
-								_elm_lang$core$Basics$toString(c),
-								A2(
-									_elm_lang$core$Basics_ops['++'],
-									'px ',
-									A2(
-										_elm_lang$core$Basics_ops['++'],
-										_elm_lang$core$Basics$toString(d),
-										'px '))))))));
-	});
-var _user$project$App$blueBackground_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'backgroundColor', '#3498DB'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$center_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'text-align', 'center'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$width_s = function (i) {
-	return _elm_lang$html$Html_Attributes$style(
-		{
-			ctor: '::',
-			_0: A2(
-				_user$project$App_ops['=>'],
-				'width',
-				A2(
-					_elm_lang$core$Basics_ops['++'],
-					_elm_lang$core$Basics$toString(i),
-					'%')),
-			_1: {
-				ctor: '::',
-				_0: A2(_user$project$App_ops['=>'], 'margin-left', 'auto'),
-				_1: {
-					ctor: '::',
-					_0: A2(_user$project$App_ops['=>'], 'margin-right', 'auto'),
-					_1: {ctor: '[]'}
-				}
-			}
-		});
-};
-var _user$project$App$whiteText_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'color', 'white'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$blackText_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'color', 'black'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$darkGrey_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'color', '#777777'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$arial_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'font-family', 'Arial'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$italic_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'font-style', 'italic'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$bold_s = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'font-weight', 'bold'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$App$backgroundStyle = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$App_ops['=>'], 'text-align', 'center'),
-		_1: {
-			ctor: '::',
-			_0: A2(_user$project$App_ops['=>'], 'padding', '10px 0px'),
-			_1: {
-				ctor: '::',
-				_0: A2(_user$project$App_ops['=>'], 'width', '100%'),
-				_1: {ctor: '[]'}
-			}
-		}
-	});
-var _user$project$App$size = F2(
-	function (h, padding) {
-		return _elm_lang$html$Html_Attributes$style(
-			{
-				ctor: '::',
-				_0: A2(
-					_user$project$App_ops['=>'],
-					'font-size',
-					A2(
-						_elm_lang$core$Basics_ops['++'],
-						_elm_lang$core$Basics$toString(h),
-						'px')),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_user$project$App_ops['=>'],
-						'padding',
-						A2(
-							_elm_lang$core$Basics_ops['++'],
-							_elm_lang$core$Basics$toString(padding),
-							'px 0')),
-					_1: {ctor: '[]'}
-				}
-			});
-	});
-var _user$project$App$jumbo = A2(
+var _user$project$App$contactUs = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
-		_0: _user$project$App$arial_s,
+		_0: _user$project$Style$width_s(80),
 		_1: {
 			ctor: '::',
-			_0: _user$project$App$whiteText_s,
+			_0: _user$project$Style$arial_s,
 			_1: {ctor: '[]'}
 		}
 	},
 	{
 		ctor: '::',
 		_0: A2(
+			_elm_lang$html$Html$h1,
+			{
+				ctor: '::',
+				_0: _user$project$Style$bold_s,
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('CONTACT US'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h4,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Email: codingski (AT) gmail.com'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$h4,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('Phone/Whatsapp: +65 9821 1538'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$App$expectedResults = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _user$project$Style$arial_s,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Style$width_s(80),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Style$left_s,
+				_1: {
+					ctor: '::',
+					_0: _user$project$Style$maxWidth_s(700),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h2,
+			{
+				ctor: '::',
+				_0: _user$project$Style$center_s,
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('Solve Complex Problems'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h3,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('At the end of the program, your kid should be able to answer the following questions using math and computer:'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$ol,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: A2(_user$project$Style_ops['=>'], 'type', '1'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Style$left_s,
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$li,
+							{
+								ctor: '::',
+								_0: A2(_user$project$Style$pad2_s, 10, 0),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('What is the sum of all prime numbers from 2 to 10000?'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$li,
+								{
+									ctor: '::',
+									_0: A2(_user$project$Style$pad2_s, 10, 0),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('In a shopping list, you are given a list of products, the price for each item, and the quantity bought for each item. What is the total price of all item bought?'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$li,
+									{
+										ctor: '::',
+										_0: A2(_user$project$Style$pad2_s, 10, 0),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Starting from the origin, you are given a list of commands (e.g. walk North for 200m, walk SouthEast for 100m, etc.). Calculate the final location.'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$App$lessonInfo = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _user$project$Style$arial_s,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Style$width_px_s(400),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Style$left_s,
+				_1: {
+					ctor: '::',
+					_0: _user$project$Style$maxWidth_s(700),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h1,
+			{
+				ctor: '::',
+				_0: _user$project$Style$center_s,
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('Lesson Info'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: A2(_user$project$Style$pad2_s, 10, 0),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$h1,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('1-1 Lessons'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$h4,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Number of Lessons: 10'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$h4,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('Length of each lesson: 1.5 hr'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$h4,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Price: S$ 600'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$h4,
+					{ctor: '[]'},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$h1,
+						{
+							ctor: '::',
+							_0: A4(_user$project$Style$pad4_s, 50, 0, 0, 0),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Group Lessons'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$h4,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Details coming soon.'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	});
+var _user$project$App$aboutTeacher = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _user$project$Style$arial_s,
+		_1: {
+			ctor: '::',
+			_0: _user$project$Style$width_s(80),
+			_1: {
+				ctor: '::',
+				_0: _user$project$Style$maxWidth_s(700),
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$img,
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$src('/myPhoto.jpg'),
+				_1: {
+					ctor: '::',
+					_0: _user$project$Style$center_s,
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$style(
+							{
+								ctor: '::',
+								_0: A2(_user$project$Style_ops['=>'], 'alt', 'INSERT PHOTO HERE'),
+								_1: {
+									ctor: '::',
+									_0: A2(_user$project$Style_ops['=>'], 'height', '200'),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Style_ops['=>'], 'width', '200'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			},
+			{ctor: '[]'}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h2,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('Instructor: Mr. Chang'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$h3,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('M.Sc. (Math), University of Michigan '),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$h3,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('B.Sc. (Math, 1st Class Hons), NUS '),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$h5,
+							{
+								ctor: '::',
+								_0: _user$project$Style$left_s,
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('A passionate mathematics major, Mr. Chang believes that mathematics is a great tool to understand the world.'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$h5,
+								{
+									ctor: '::',
+									_0: _user$project$Style$left_s,
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('Mr. Chang is passionate in bringing university-level coding skills to young children, to link their primary school math education to real-life problem-solving.'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$h5,
+									{
+										ctor: '::',
+										_0: _user$project$Style$left_s,
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Mr. Chang previously taught Calculus in University of Michigan, and taught Math Olympiad to Primary School students in Singapore.'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$h5,
+										{
+											ctor: '::',
+											_0: _user$project$Style$left_s,
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('He is currently a Financial Engineer at Numerical Technologies, a risk-management software company.'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+var _user$project$App$aboutClass = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _user$project$Style$width_s(80),
+		_1: {
+			ctor: '::',
+			_0: _user$project$Style$arial_s,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Style$left_s,
+				_1: {
+					ctor: '::',
+					_0: _user$project$Style$maxWidth_s(700),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h1,
+			{
+				ctor: '::',
+				_0: _user$project$Style$center_s,
+				_1: {ctor: '[]'}
+			},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('...for good Mathematics Students'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h4,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('The lessons are designed for students who are well-versed in mathematics, e.g. participated in Math-Olympiad competition, or Secondary School and above.'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$h4,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('This allows us to focus on the computational part of the coding, and to use primary school mathematics to solve real-life problems.'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$h4,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('Parents with primary school kids are encouraged to contact us to schedule an assessment test. A supplement course is available for students that needs extra math background training.'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	});
+var _user$project$App$introduction = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _user$project$Style$width_s(80),
+		_1: {
+			ctor: '::',
+			_0: _user$project$Style$arial_s,
+			_1: {
+				ctor: '::',
+				_0: _user$project$Style$maxWidth_s(700),
+				_1: {ctor: '[]'}
+			}
+		}
+	},
+	{
+		ctor: '::',
+		_0: A2(
+			_elm_lang$html$Html$h1,
+			{ctor: '[]'},
+			{
+				ctor: '::',
+				_0: _elm_lang$html$Html$text('Math-Oriented Coding Lessons...'),
+				_1: {ctor: '[]'}
+			}),
+		_1: {
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h4,
+				{
+					ctor: '::',
+					_0: _user$project$Style$left_s,
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('SKI Coding School provides math-oriented coding programs for students aged 10 to 18. Our lesons include semester weekly coding classes and holiday intensive classes.'),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _user$project$App$jumbo = A2(
+	_elm_lang$html$Html$div,
+	{ctor: '[]'},
+	{
+		ctor: '::',
+		_0: A2(
 			_elm_lang$html$Html$span,
 			{
 				ctor: '::',
-				_0: A2(_user$project$App$size, 120, 16),
+				_0: _user$project$Style$fontSize_s(120),
 				_1: {
 					ctor: '::',
-					_0: _user$project$App$italic_s,
+					_0: A2(_user$project$Style$pad2_s, 16, 0),
 					_1: {
 						ctor: '::',
-						_0: _user$project$App$bold_s,
-						_1: {ctor: '[]'}
+						_0: _user$project$Style$italic_s,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Style$bold_s,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Style$maxWidth_s(700),
+								_1: {ctor: '[]'}
+							}
+						}
 					}
 				}
 			},
@@ -189,11 +571,15 @@ var _user$project$App$jumbo = A2(
 				_elm_lang$html$Html$span,
 				{
 					ctor: '::',
-					_0: A2(_user$project$App$size, 80, 1),
+					_0: _user$project$Style$fontSize_s(60),
 					_1: {
 						ctor: '::',
-						_0: _user$project$App$bold_s,
-						_1: {ctor: '[]'}
+						_0: A2(_user$project$Style$pad2_s, 1, 0),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Style$bold_s,
+							_1: {ctor: '[]'}
+						}
 					}
 				},
 				{
@@ -204,15 +590,15 @@ var _user$project$App$jumbo = A2(
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$div,
+					_elm_lang$html$Html$h4,
 					{
 						ctor: '::',
-						_0: A2(_user$project$App$size, 20, 8),
+						_0: A2(_user$project$Style$pad2_s, 8, 0),
 						_1: {ctor: '[]'}
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text('Solve computer problem using Primary School Math!'),
+						_0: _elm_lang$html$Html$text('Learn coding through Primary School Math!'),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
@@ -226,37 +612,213 @@ var _user$project$App$jumbo = A2(
 			}
 		}
 	});
-var _user$project$App$introduction = A2(
-	_elm_lang$html$Html$div,
-	{ctor: '[]'},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$h3,
-			{
-				ctor: '::',
-				_0: A2(_user$project$App$size, 14, 8),
-				_1: {
+var _user$project$App$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
 					ctor: '::',
-					_0: _user$project$App$arial_s,
+					_0: A2(_user$project$Style$pad2_s, 50, 0),
 					_1: {
 						ctor: '::',
-						_0: _user$project$App$darkGrey_s,
+						_0: _user$project$Style$style1_s,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Style$center_s,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Style$width_s(100),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _user$project$App$jumbo,
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{
+						ctor: '::',
+						_0: A2(_user$project$Style$pad2_s, 50, 0),
+						_1: {
+							ctor: '::',
+							_0: _user$project$Style$style2_s,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Style$center_s,
+								_1: {
+									ctor: '::',
+									_0: _user$project$Style$width_s(100),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					{
+						ctor: '::',
+						_0: _user$project$App$introduction,
 						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: A2(_user$project$Style$pad2_s, 50, 0),
+							_1: {
+								ctor: '::',
+								_0: _user$project$Style$style3_s,
+								_1: {
+									ctor: '::',
+									_0: _user$project$Style$center_s,
+									_1: {
+										ctor: '::',
+										_0: _user$project$Style$width_s(100),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						{
+							ctor: '::',
+							_0: _user$project$App$aboutClass,
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: A2(_user$project$Style$pad2_s, 50, 0),
+								_1: {
+									ctor: '::',
+									_0: _user$project$Style$style2_s,
+									_1: {
+										ctor: '::',
+										_0: _user$project$Style$center_s,
+										_1: {
+											ctor: '::',
+											_0: _user$project$Style$width_s(100),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							{
+								ctor: '::',
+								_0: _user$project$App$expectedResults,
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$div,
+								{
+									ctor: '::',
+									_0: A2(_user$project$Style$pad2_s, 50, 0),
+									_1: {
+										ctor: '::',
+										_0: _user$project$Style$style3_s,
+										_1: {
+											ctor: '::',
+											_0: _user$project$Style$center_s,
+											_1: {
+												ctor: '::',
+												_0: _user$project$Style$width_s(100),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								{
+									ctor: '::',
+									_0: _user$project$App$aboutTeacher,
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$div,
+									{
+										ctor: '::',
+										_0: A2(_user$project$Style$pad2_s, 50, 0),
+										_1: {
+											ctor: '::',
+											_0: _user$project$Style$style2_s,
+											_1: {
+												ctor: '::',
+												_0: _user$project$Style$center_s,
+												_1: {
+													ctor: '::',
+													_0: _user$project$Style$width_s(100),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									},
+									{
+										ctor: '::',
+										_0: _user$project$App$lessonInfo,
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$div,
+										{
+											ctor: '::',
+											_0: A2(_user$project$Style$pad2_s, 50, 0),
+											_1: {
+												ctor: '::',
+												_0: _user$project$Style$style1_s,
+												_1: {
+													ctor: '::',
+													_0: _user$project$Style$center_s,
+													_1: {
+														ctor: '::',
+														_0: _user$project$Style$width_s(100),
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _user$project$App$contactUs,
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
 					}
 				}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('SKI Coding School provides math-oriented coding programs form students aged 10 to 18. Our lesons include weekly coding classes, holiday intensive course, and Math Olympiad training.'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {ctor: '[]'}
-	});
+			}
+		});
+};
 var _user$project$App$Model = F2(
 	function (a, b) {
-		return {x: a, y: b};
+		return {x: a, screenSize: b};
 	});
+var _user$project$App$Desktop = {ctor: 'Desktop'};
+var _user$project$App$init = {
+	ctor: '_Tuple2',
+	_0: {x: 1, screenSize: _user$project$App$Desktop},
+	_1: _elm_lang$core$Platform_Cmd$none
+};
+var _user$project$App$Tablet = {ctor: 'Tablet'};
+var _user$project$App$Mobile = {ctor: 'Mobile'};
 var _user$project$App$Resize = F2(
 	function (a, b) {
 		return {ctor: 'Resize', _0: a, _1: b};
@@ -292,116 +854,17 @@ var _user$project$App$update = F2(
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			default:
+				var _p1 = _p0._1;
+				var screenSize = (_elm_lang$core$Native_Utils.cmp(_p1, 400) < 0) ? _user$project$App$Mobile : ((_elm_lang$core$Native_Utils.cmp(_p1, 700) < 0) ? _user$project$App$Tablet : _user$project$App$Desktop);
 				return {
 					ctor: '_Tuple2',
-					_0: {x: _p0._0, y: _p0._1},
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{screenSize: screenSize}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 		}
 	});
-var _user$project$App$Roll = {ctor: 'Roll'};
-var _user$project$App$view = function (model) {
-	return A2(
-		_elm_lang$html$Html$div,
-		{ctor: '[]'},
-		{
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: A4(_user$project$App$padding_s, 100, 0, 100, 0),
-					_1: {
-						ctor: '::',
-						_0: _user$project$App$blueBackground_s,
-						_1: {
-							ctor: '::',
-							_0: _user$project$App$center_s,
-							_1: {
-								ctor: '::',
-								_0: _user$project$App$width_s(100),
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				},
-				{
-					ctor: '::',
-					_0: _user$project$App$jumbo,
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
-						ctor: '::',
-						_0: _user$project$App$center_s,
-						_1: {
-							ctor: '::',
-							_0: _user$project$App$width_s(80),
-							_1: {ctor: '[]'}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _user$project$App$introduction,
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$div,
-						{ctor: '[]'},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('ASDF'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$div,
-							{ctor: '[]'},
-							{
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$h1,
-									{ctor: '[]'},
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html$text(
-											A2(
-												_elm_lang$core$Basics_ops['++'],
-												_elm_lang$core$Basics$toString(model.x),
-												A2(
-													_elm_lang$core$Basics_ops['++'],
-													'----',
-													_elm_lang$core$Basics$toString(model.y)))),
-										_1: {ctor: '[]'}
-									}),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_elm_lang$html$Html$button,
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html_Events$onClick(_user$project$App$Roll),
-											_1: {ctor: '[]'}
-										},
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html$text('Roll'),
-											_1: {ctor: '[]'}
-										}),
-									_1: {ctor: '[]'}
-								}
-							}),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		});
-};
 var _user$project$App$main = _elm_lang$html$Html$program(
 	{init: _user$project$App$init, view: _user$project$App$view, update: _user$project$App$update, subscriptions: _user$project$App$subscriptions})();
+var _user$project$App$Roll = {ctor: 'Roll'};

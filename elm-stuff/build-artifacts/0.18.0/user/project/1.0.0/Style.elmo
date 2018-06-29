@@ -1,0 +1,288 @@
+var _user$project$Style_ops = _user$project$Style_ops || {};
+_user$project$Style_ops['=>'] = F2(
+	function (a, b) {
+		return {ctor: '_Tuple2', _0: a, _1: b};
+	});
+var _user$project$Style$style1_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', '#3498DB'),
+		_1: {
+			ctor: '::',
+			_0: A2(_user$project$Style_ops['=>'], 'color', '#FFFFFF'),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Style_ops['=>'], 'font-family', 'Arial'),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$Style$style2_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', '#DDDDDD'),
+		_1: {
+			ctor: '::',
+			_0: A2(_user$project$Style_ops['=>'], 'color', '#444444'),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Style_ops['=>'], 'font-family', 'Arial'),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$Style$style3_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', '#99DDDD'),
+		_1: {
+			ctor: '::',
+			_0: A2(_user$project$Style_ops['=>'], 'color', '#444444'),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Style_ops['=>'], 'font-family', 'Arial'),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$Style$blueBackground_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', '#3498DB'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$greyBackground_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', '#DDDDDD'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$backgroundColor_s = function (x) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', x),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Style$center_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'text-align', 'center'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$left_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'text-align', 'left'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$width_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'width',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'%')),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Style_ops['=>'], 'margin-left', 'auto'),
+				_1: {
+					ctor: '::',
+					_0: A2(_user$project$Style_ops['=>'], 'margin-right', 'auto'),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Style$width_px_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'width',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'px')),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Style_ops['=>'], 'margin-left', 'auto'),
+				_1: {
+					ctor: '::',
+					_0: A2(_user$project$Style_ops['=>'], 'margin-right', 'auto'),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
+};
+var _user$project$Style$maxWidth_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'max-width',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'px')),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Style$whiteText_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'color', 'white'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$lightGrey_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'color', '#DDDDDD'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$blackText_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'color', 'black'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$darkGrey_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'color', '#444444'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$arial_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'font-family', 'Arial'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$italic_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'font-style', 'italic'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$bold_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'font-weight', 'bold'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$fontSize_s = function (h) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'font-size',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(h),
+					'px')),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Style$pad1_s = function (each) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'padding',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(each),
+					'px')),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Style$pad2_s = F2(
+	function (tb, lr) {
+		return _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: A2(
+					_user$project$Style_ops['=>'],
+					'padding',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(tb),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'px ',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(lr),
+								'px')))),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$Style$pad3_s = F3(
+	function (t, lr, b) {
+		return _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: A2(
+					_user$project$Style_ops['=>'],
+					'padding',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(t),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'px ',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(lr),
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'px ',
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										_elm_lang$core$Basics$toString(b),
+										'px')))))),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$Style$pad4_s = F4(
+	function (t, r, b, l) {
+		return _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: A2(
+					_user$project$Style_ops['=>'],
+					'padding',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(t),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'px ',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(r),
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'px ',
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										_elm_lang$core$Basics$toString(b),
+										A2(
+											_elm_lang$core$Basics_ops['++'],
+											'px ',
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												_elm_lang$core$Basics$toString(l),
+												'px')))))))),
+				_1: {ctor: '[]'}
+			});
+	});
