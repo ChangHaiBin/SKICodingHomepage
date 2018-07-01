@@ -1,23 +1,23 @@
-var _user$project$App$subscriptions = function (model) {
+var _user$project$ProjectEulerModified$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$none;
 };
-var _user$project$App_ops = _user$project$App_ops || {};
-_user$project$App_ops['|||>'] = F2(
+var _user$project$ProjectEulerModified_ops = _user$project$ProjectEulerModified_ops || {};
+_user$project$ProjectEulerModified_ops['|||>'] = F2(
 	function (_p0, f) {
 		var _p1 = _p0;
 		return A3(f, _p1._0, _p1._1, _p1._2);
 	});
-var _user$project$App_ops = _user$project$App_ops || {};
-_user$project$App_ops['||>'] = F2(
+var _user$project$ProjectEulerModified_ops = _user$project$ProjectEulerModified_ops || {};
+_user$project$ProjectEulerModified_ops['||>'] = F2(
 	function (_p2, f) {
 		var _p3 = _p2;
 		return A2(f, _p3._0, _p3._1);
 	});
-var _user$project$App$init = function () {
+var _user$project$ProjectEulerModified$init = function () {
 	var initialModel = {userInput: '', question: 1, correct: _elm_lang$core$Maybe$Nothing, userQuestionSelection: '', cannotChangeQuestion: ''};
 	return {ctor: '_Tuple2', _0: initialModel, _1: _elm_lang$core$Platform_Cmd$none};
 }();
-var _user$project$App$solutions = _elm_lang$core$Dict$fromList(
+var _user$project$ProjectEulerModified$solutions = _elm_lang$core$Dict$fromList(
 	A2(
 		_elm_lang$core$List$map,
 		function (_p4) {
@@ -1384,7 +1384,7 @@ var _user$project$App$solutions = _elm_lang$core$Dict$fromList(
 				}
 			}
 		}));
-var _user$project$App$getQuestion = function (i) {
+var _user$project$ProjectEulerModified$getQuestion = function (i) {
 	return A2(
 		_elm_lang$core$Maybe$withDefault,
 		A2(
@@ -1394,9 +1394,9 @@ var _user$project$App$getQuestion = function (i) {
 		A2(
 			_elm_lang$core$Maybe$map,
 			_elm_lang$core$Tuple$second,
-			A2(_elm_lang$core$Dict$get, i, _user$project$App$solutions)));
+			A2(_elm_lang$core$Dict$get, i, _user$project$ProjectEulerModified$solutions)));
 };
-var _user$project$App$update = F2(
+var _user$project$ProjectEulerModified$update = F2(
 	function (msg, model) {
 		var newModel = function () {
 			var _p6 = msg;
@@ -1414,7 +1414,7 @@ var _user$project$App$update = F2(
 						var _p8 = _elm_lang$core$String$toInt(model.userQuestionSelection);
 						if (_p8.ctor === 'Ok') {
 							var _p10 = _p8._0;
-							var _p9 = A2(_elm_lang$core$Dict$get, _p10, _user$project$App$solutions);
+							var _p9 = A2(_elm_lang$core$Dict$get, _p10, _user$project$ProjectEulerModified$solutions);
 							if (_p9.ctor === 'Just') {
 								return {ctor: '_Tuple2', _0: _p10, _1: ''};
 							} else {
@@ -1443,25 +1443,25 @@ var _user$project$App$update = F2(
 											var _p12 = _p11;
 											return _elm_lang$core$Native_Utils.eq(_p12._0, model.userInput);
 										},
-										A2(_elm_lang$core$Dict$get, model.question, _user$project$App$solutions))))
+										A2(_elm_lang$core$Dict$get, model.question, _user$project$ProjectEulerModified$solutions))))
 						});
 			}
 		}();
 		return {ctor: '_Tuple2', _0: newModel, _1: _elm_lang$core$Platform_Cmd$none};
 	});
-var _user$project$App$Model = F5(
+var _user$project$ProjectEulerModified$Model = F5(
 	function (a, b, c, d, e) {
 		return {userInput: a, question: b, correct: c, userQuestionSelection: d, cannotChangeQuestion: e};
 	});
-var _user$project$App$CheckAnswer = {ctor: 'CheckAnswer'};
-var _user$project$App$ChangeQuestion = {ctor: 'ChangeQuestion'};
-var _user$project$App$UpdateQuestionInput = function (a) {
+var _user$project$ProjectEulerModified$CheckAnswer = {ctor: 'CheckAnswer'};
+var _user$project$ProjectEulerModified$ChangeQuestion = {ctor: 'ChangeQuestion'};
+var _user$project$ProjectEulerModified$UpdateQuestionInput = function (a) {
 	return {ctor: 'UpdateQuestionInput', _0: a};
 };
-var _user$project$App$UpdateInput = function (a) {
+var _user$project$ProjectEulerModified$UpdateInput = function (a) {
 	return {ctor: 'UpdateInput', _0: a};
 };
-var _user$project$App$view = function (model) {
+var _user$project$ProjectEulerModified$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -1598,12 +1598,12 @@ var _user$project$App$view = function (model) {
 												_0: _elm_lang$html$Html_Attributes$style(
 													{
 														ctor: '::',
-														_0: A2(_user$project$Style_ops['=>'], 'maxlength', '3'),
+														_0: A2(_user$project$Style_ops['=>'], 'maxlength', '13314288'),
 														_1: {ctor: '[]'}
 													}),
 												_1: {
 													ctor: '::',
-													_0: _user$project$Style$fontSize_percent_s(150),
+													_0: _user$project$Style$fontSize_percent_s(120),
 													_1: {
 														ctor: '::',
 														_0: _user$project$Style$backgroundColor_s('#FFAAAA'),
@@ -1612,7 +1612,7 @@ var _user$project$App$view = function (model) {
 															_0: _elm_lang$html$Html_Attributes$type_('text'),
 															_1: {
 																ctor: '::',
-																_0: _elm_lang$html$Html_Events$onInput(_user$project$App$UpdateQuestionInput),
+																_0: _elm_lang$html$Html_Events$onInput(_user$project$ProjectEulerModified$UpdateQuestionInput),
 																_1: {
 																	ctor: '::',
 																	_0: _user$project$Style$width_px_s(50),
@@ -1627,43 +1627,58 @@ var _user$project$App$view = function (model) {
 										_1: {
 											ctor: '::',
 											_0: A2(
-												_elm_lang$html$Html$button,
+												_elm_lang$html$Html$span,
 												{
 													ctor: '::',
-													_0: _user$project$Style$backgroundColor_s('#773007'),
-													_1: {
+													_0: A2(_user$project$Style$pad2_s, 0, 5),
+													_1: {ctor: '[]'}
+												},
+												{ctor: '[]'}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$button,
+													{
 														ctor: '::',
-														_0: _user$project$Style$whiteText_s,
+														_0: _user$project$Style$backgroundColor_s('#773007'),
 														_1: {
 															ctor: '::',
-															_0: _elm_lang$html$Html_Events$onClick(_user$project$App$ChangeQuestion),
+															_0: _user$project$Style$whiteText_s,
 															_1: {
 																ctor: '::',
-																_0: A2(_user$project$Style$pad2_s, 10, 20),
+																_0: _elm_lang$html$Html_Events$onClick(_user$project$ProjectEulerModified$ChangeQuestion),
 																_1: {
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Attributes$style(
-																		{
+																	_0: A4(_user$project$Style$pad4_s, 10, 10, 10, 10),
+																	_1: {
+																		ctor: '::',
+																		_0: _user$project$Style$bold_s,
+																		_1: {
 																			ctor: '::',
-																			_0: A2(_user$project$Style_ops['=>'], 'border-radius', '4px'),
-																			_1: {
-																				ctor: '::',
-																				_0: A2(_user$project$Style_ops['=>'], 'border', 'none'),
-																				_1: {ctor: '[]'}
-																			}
-																		}),
-																	_1: {ctor: '[]'}
+																			_0: _elm_lang$html$Html_Attributes$style(
+																				{
+																					ctor: '::',
+																					_0: A2(_user$project$Style_ops['=>'], 'border-radius', '4px'),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Style_ops['=>'], 'border', 'none'),
+																						_1: {ctor: '[]'}
+																					}
+																				}),
+																			_1: {ctor: '[]'}
+																		}
+																	}
 																}
 															}
 														}
-													}
-												},
-												{
-													ctor: '::',
-													_0: _elm_lang$html$Html$text('Change'),
-													_1: {ctor: '[]'}
-												}),
-											_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html$text('Change'),
+														_1: {ctor: '[]'}
+													}),
+												_1: {ctor: '[]'}
+											}
 										}
 									}),
 								_1: {
@@ -1728,7 +1743,7 @@ var _user$project$App$view = function (model) {
 											{ctor: '[]'},
 											{
 												ctor: '::',
-												_0: _user$project$App$getQuestion(model.question),
+												_0: _user$project$ProjectEulerModified$getQuestion(model.question),
 												_1: {ctor: '[]'}
 											}),
 										_1: {
@@ -1756,35 +1771,87 @@ var _user$project$App$view = function (model) {
 															_elm_lang$html$Html$input,
 															{
 																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$type_('text'),
+																_0: _user$project$Style$width_px_s(200),
 																_1: {
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Events$onInput(_user$project$App$UpdateInput),
-																	_1: {ctor: '[]'}
+																	_0: _user$project$Style$fontSize_percent_s(120),
+																	_1: {
+																		ctor: '::',
+																		_0: _user$project$Style$backgroundColor_s('#9ff9b3'),
+																		_1: {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$type_('text'),
+																			_1: {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Events$onInput(_user$project$ProjectEulerModified$UpdateInput),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
 																}
 															},
 															{ctor: '[]'}),
 														_1: {
 															ctor: '::',
 															_0: A2(
-																_elm_lang$html$Html$button,
+																_elm_lang$html$Html$span,
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Events$onClick(_user$project$App$CheckAnswer),
+																	_0: A2(_user$project$Style$pad2_s, 0, 5),
 																	_1: {ctor: '[]'}
 																},
-																{
-																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('Submit Answer'),
-																	_1: {ctor: '[]'}
-																}),
-															_1: {ctor: '[]'}
+																{ctor: '[]'}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$button,
+																	{
+																		ctor: '::',
+																		_0: _user$project$Style$backgroundColor_s('#147714'),
+																		_1: {
+																			ctor: '::',
+																			_0: A4(_user$project$Style$pad4_s, 10, 10, 10, 10),
+																			_1: {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Events$onClick(_user$project$ProjectEulerModified$CheckAnswer),
+																				_1: {
+																					ctor: '::',
+																					_0: _user$project$Style$bold_s,
+																					_1: {
+																						ctor: '::',
+																						_0: _user$project$Style$whiteText_s,
+																						_1: {
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$style(
+																								{
+																									ctor: '::',
+																									_0: A2(_user$project$Style_ops['=>'], 'border-radius', '4px'),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(_user$project$Style_ops['=>'], 'border', 'none'),
+																										_1: {ctor: '[]'}
+																									}
+																								}),
+																							_1: {ctor: '[]'}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	},
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text('Submit Answer'),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {ctor: '[]'}
+															}
 														}
 													}),
 												_1: {
 													ctor: '::',
 													_0: A2(
-														_elm_lang$html$Html$div,
+														_elm_lang$html$Html$p,
 														{ctor: '[]'},
 														{
 															ctor: '::',
@@ -1793,12 +1860,12 @@ var _user$project$App$view = function (model) {
 																	var _p13 = model.correct;
 																	if (_p13.ctor === 'Just') {
 																		if (_p13._0 === true) {
-																			return 'Correct!';
+																			return 'Result: Correct! You win!';
 																		} else {
-																			return 'Wrong.';
+																			return 'Result: Wrong. Please try again.';
 																		}
 																	} else {
-																		return '';
+																		return 'Result: ';
 																	}
 																}()),
 															_1: {ctor: '[]'}
@@ -1816,5 +1883,5 @@ var _user$project$App$view = function (model) {
 			}
 		});
 };
-var _user$project$App$main = _elm_lang$html$Html$program(
-	{init: _user$project$App$init, view: _user$project$App$view, update: _user$project$App$update, subscriptions: _user$project$App$subscriptions})();
+var _user$project$ProjectEulerModified$main = _elm_lang$html$Html$program(
+	{init: _user$project$ProjectEulerModified$init, view: _user$project$ProjectEulerModified$view, update: _user$project$ProjectEulerModified$update, subscriptions: _user$project$ProjectEulerModified$subscriptions})();
