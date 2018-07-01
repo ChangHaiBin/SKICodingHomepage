@@ -55,6 +55,18 @@ left_s =
     style [ "text-align" => "left" ]
 
 
+floatRight_s =
+    style [ "float" => "right" ]
+
+
+floatLeft_s =
+    style [ "float" => "left" ]
+
+
+right_s =
+    style [ "text-align" => "right" ]
+
+
 width_s i =
     style [ "width" => (toString i ++ "%"), "margin-left" => "auto", "margin-right" => "auto" ]
 
@@ -93,6 +105,10 @@ italic_s =
 
 bold_s =
     style [ "font-weight" => "bold" ]
+
+
+fontSize_percent_s percent =
+    style [ "font-size" => (toString percent ++ "%") ]
 
 
 fontSize_s h =

@@ -77,6 +77,24 @@ var _user$project$Style$left_s = _elm_lang$html$Html_Attributes$style(
 		_0: A2(_user$project$Style_ops['=>'], 'text-align', 'left'),
 		_1: {ctor: '[]'}
 	});
+var _user$project$Style$floatRight_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'float', 'right'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$floatLeft_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'float', 'left'),
+		_1: {ctor: '[]'}
+	});
+var _user$project$Style$right_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'text-align', 'right'),
+		_1: {ctor: '[]'}
+	});
 var _user$project$Style$width_s = function (i) {
 	return _elm_lang$html$Html_Attributes$style(
 		{
@@ -177,6 +195,20 @@ var _user$project$Style$bold_s = _elm_lang$html$Html_Attributes$style(
 		_0: A2(_user$project$Style_ops['=>'], 'font-weight', 'bold'),
 		_1: {ctor: '[]'}
 	});
+var _user$project$Style$fontSize_percent_s = function (percent) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'font-size',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(percent),
+					'%')),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$Style$fontSize_s = function (h) {
 	return _elm_lang$html$Html_Attributes$style(
 		{

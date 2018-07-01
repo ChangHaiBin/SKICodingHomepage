@@ -1,4 +1,4 @@
-var _user$project$App$contactUs = A2(
+var _user$project$SKICoding$contactUs = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -55,7 +55,7 @@ var _user$project$App$contactUs = A2(
 			}
 		}
 	});
-var _user$project$App$expectedResults = A2(
+var _user$project$SKICoding$expectedResults = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -178,7 +178,7 @@ var _user$project$App$expectedResults = A2(
 			}
 		}
 	});
-var _user$project$App$lessonInfo = A2(
+var _user$project$SKICoding$lessonInfo = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -313,7 +313,7 @@ var _user$project$App$lessonInfo = A2(
 			}
 		}
 	});
-var _user$project$App$aboutTeacher = A2(
+var _user$project$SKICoding$aboutTeacher = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -486,7 +486,7 @@ var _user$project$App$aboutTeacher = A2(
 			}
 		}
 	});
-var _user$project$App$aboutClass = A2(
+var _user$project$SKICoding$aboutClass = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -566,7 +566,7 @@ var _user$project$App$aboutClass = A2(
 			}
 		}
 	});
-var _user$project$App$introduction = A2(
+var _user$project$SKICoding$introduction = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -620,7 +620,7 @@ var _user$project$App$introduction = A2(
 			_1: {ctor: '[]'}
 		}
 	});
-var _user$project$App$jumbo = A2(
+var _user$project$SKICoding$jumbo = A2(
 	_elm_lang$html$Html$div,
 	{
 		ctor: '::',
@@ -721,7 +721,7 @@ var _user$project$App$jumbo = A2(
 			}
 		}
 	});
-var _user$project$App$view = function (model) {
+var _user$project$SKICoding$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -752,7 +752,7 @@ var _user$project$App$view = function (model) {
 				},
 				{
 					ctor: '::',
-					_0: _user$project$App$jumbo,
+					_0: _user$project$SKICoding$jumbo,
 					_1: {ctor: '[]'}
 				}),
 			_1: {
@@ -771,14 +771,25 @@ var _user$project$App$view = function (model) {
 								_1: {
 									ctor: '::',
 									_0: _user$project$Style$width_s(100),
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: _user$project$Style$fontSize_percent_s(500),
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}
 					},
 					{
 						ctor: '::',
-						_0: _user$project$App$introduction,
+						_0: _elm_lang$html$Html$text(
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(model.i),
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'x',
+									_elm_lang$core$Basics$toString(model.j)))),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
@@ -790,7 +801,7 @@ var _user$project$App$view = function (model) {
 							_0: A2(_user$project$Style$pad2_s, 50, 0),
 							_1: {
 								ctor: '::',
-								_0: _user$project$Style$style3_s,
+								_0: _user$project$Style$style2_s,
 								_1: {
 									ctor: '::',
 									_0: _user$project$Style$center_s,
@@ -804,7 +815,7 @@ var _user$project$App$view = function (model) {
 						},
 						{
 							ctor: '::',
-							_0: _user$project$App$aboutClass,
+							_0: _user$project$SKICoding$introduction,
 							_1: {ctor: '[]'}
 						}),
 					_1: {
@@ -816,7 +827,7 @@ var _user$project$App$view = function (model) {
 								_0: A2(_user$project$Style$pad2_s, 50, 0),
 								_1: {
 									ctor: '::',
-									_0: _user$project$Style$style2_s,
+									_0: _user$project$Style$style3_s,
 									_1: {
 										ctor: '::',
 										_0: _user$project$Style$center_s,
@@ -830,7 +841,7 @@ var _user$project$App$view = function (model) {
 							},
 							{
 								ctor: '::',
-								_0: _user$project$App$expectedResults,
+								_0: _user$project$SKICoding$aboutClass,
 								_1: {ctor: '[]'}
 							}),
 						_1: {
@@ -842,7 +853,7 @@ var _user$project$App$view = function (model) {
 									_0: A2(_user$project$Style$pad2_s, 50, 0),
 									_1: {
 										ctor: '::',
-										_0: _user$project$Style$style3_s,
+										_0: _user$project$Style$style2_s,
 										_1: {
 											ctor: '::',
 											_0: _user$project$Style$center_s,
@@ -856,7 +867,7 @@ var _user$project$App$view = function (model) {
 								},
 								{
 									ctor: '::',
-									_0: _user$project$App$aboutTeacher,
+									_0: _user$project$SKICoding$expectedResults,
 									_1: {ctor: '[]'}
 								}),
 							_1: {
@@ -868,7 +879,7 @@ var _user$project$App$view = function (model) {
 										_0: A2(_user$project$Style$pad2_s, 50, 0),
 										_1: {
 											ctor: '::',
-											_0: _user$project$Style$style2_s,
+											_0: _user$project$Style$style3_s,
 											_1: {
 												ctor: '::',
 												_0: _user$project$Style$center_s,
@@ -882,7 +893,7 @@ var _user$project$App$view = function (model) {
 									},
 									{
 										ctor: '::',
-										_0: _user$project$App$lessonInfo,
+										_0: _user$project$SKICoding$aboutTeacher,
 										_1: {ctor: '[]'}
 									}),
 								_1: {
@@ -894,7 +905,7 @@ var _user$project$App$view = function (model) {
 											_0: A2(_user$project$Style$pad2_s, 50, 0),
 											_1: {
 												ctor: '::',
-												_0: _user$project$Style$style1_s,
+												_0: _user$project$Style$style2_s,
 												_1: {
 													ctor: '::',
 													_0: _user$project$Style$center_s,
@@ -908,10 +919,37 @@ var _user$project$App$view = function (model) {
 										},
 										{
 											ctor: '::',
-											_0: _user$project$App$contactUs,
+											_0: _user$project$SKICoding$lessonInfo,
 											_1: {ctor: '[]'}
 										}),
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$div,
+											{
+												ctor: '::',
+												_0: A2(_user$project$Style$pad2_s, 50, 0),
+												_1: {
+													ctor: '::',
+													_0: _user$project$Style$style1_s,
+													_1: {
+														ctor: '::',
+														_0: _user$project$Style$center_s,
+														_1: {
+															ctor: '::',
+															_0: _user$project$Style$width_s(100),
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											},
+											{
+												ctor: '::',
+												_0: _user$project$SKICoding$contactUs,
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}
@@ -920,7 +958,7 @@ var _user$project$App$view = function (model) {
 			}
 		});
 };
-var _user$project$App$style1 = _elm_lang$html$Html_Attributes$style(
+var _user$project$SKICoding$style1 = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
 		_0: A2(_user$project$Style_ops['=>'], 'display', 'inline-block'),
@@ -942,7 +980,7 @@ var _user$project$App$style1 = _elm_lang$html$Html_Attributes$style(
 			}
 		}
 	});
-var _user$project$App$topLine = A2(
+var _user$project$SKICoding$topLine = A2(
 	_elm_lang$html$Html$ul,
 	{
 		ctor: '::',
@@ -972,7 +1010,7 @@ var _user$project$App$topLine = A2(
 			_elm_lang$html$Html$li,
 			{
 				ctor: '::',
-				_0: _user$project$App$style1,
+				_0: _user$project$SKICoding$style1,
 				_1: {ctor: '[]'}
 			},
 			{
@@ -986,7 +1024,7 @@ var _user$project$App$topLine = A2(
 				_elm_lang$html$Html$li,
 				{
 					ctor: '::',
-					_0: _user$project$App$style1,
+					_0: _user$project$SKICoding$style1,
 					_1: {ctor: '[]'}
 				},
 				{
@@ -1000,7 +1038,7 @@ var _user$project$App$topLine = A2(
 					_elm_lang$html$Html$li,
 					{
 						ctor: '::',
-						_0: _user$project$App$style1,
+						_0: _user$project$SKICoding$style1,
 						_1: {ctor: '[]'}
 					},
 					{
@@ -1014,7 +1052,7 @@ var _user$project$App$topLine = A2(
 						_elm_lang$html$Html$li,
 						{
 							ctor: '::',
-							_0: _user$project$App$style1,
+							_0: _user$project$SKICoding$style1,
 							_1: {ctor: '[]'}
 						},
 						{
@@ -1027,22 +1065,22 @@ var _user$project$App$topLine = A2(
 			}
 		}
 	});
-var _user$project$App$Model = F4(
+var _user$project$SKICoding$Model = F4(
 	function (a, b, c, d) {
 		return {x: a, i: b, j: c, screenSize: d};
 	});
-var _user$project$App$Desktop = {ctor: 'Desktop'};
-var _user$project$App$Tablet = {ctor: 'Tablet'};
-var _user$project$App$Mobile = {ctor: 'Mobile'};
-var _user$project$App$Resize = F2(
+var _user$project$SKICoding$Desktop = {ctor: 'Desktop'};
+var _user$project$SKICoding$Tablet = {ctor: 'Tablet'};
+var _user$project$SKICoding$Mobile = {ctor: 'Mobile'};
+var _user$project$SKICoding$Resize = F2(
 	function (a, b) {
 		return {ctor: 'Resize', _0: a, _1: b};
 	});
-var _user$project$App$initialSizeCmd = A2(
+var _user$project$SKICoding$initialSizeCmd = A2(
 	_elm_lang$core$Task$perform,
 	function (_p0) {
 		var _p1 = _p0;
-		return A2(_user$project$App$Resize, _p1._0, _p1._1);
+		return A2(_user$project$SKICoding$Resize, _p1._0, _p1._1);
 	},
 	A3(
 		_elm_lang$core$Task$map2,
@@ -1052,21 +1090,21 @@ var _user$project$App$initialSizeCmd = A2(
 			}),
 		_elm_lang$window$Window$height,
 		_elm_lang$window$Window$width));
-var _user$project$App$init = {
+var _user$project$SKICoding$init = {
 	ctor: '_Tuple2',
-	_0: {x: 1, i: 0, j: 0, screenSize: _user$project$App$Desktop},
-	_1: _user$project$App$initialSizeCmd
+	_0: {x: 1, i: 0, j: 0, screenSize: _user$project$SKICoding$Desktop},
+	_1: _user$project$SKICoding$initialSizeCmd
 };
-var _user$project$App$subscriptions = function (model) {
+var _user$project$SKICoding$subscriptions = function (model) {
 	return _elm_lang$window$Window$resizes(
 		function (qqq) {
-			return A2(_user$project$App$Resize, qqq.height, qqq.width);
+			return A2(_user$project$SKICoding$Resize, qqq.height, qqq.width);
 		});
 };
-var _user$project$App$NewFace = function (a) {
+var _user$project$SKICoding$NewFace = function (a) {
 	return {ctor: 'NewFace', _0: a};
 };
-var _user$project$App$update = F2(
+var _user$project$SKICoding$update = F2(
 	function (msg, model) {
 		var _p2 = msg;
 		switch (_p2.ctor) {
@@ -1076,7 +1114,7 @@ var _user$project$App$update = F2(
 					_0: model,
 					_1: A2(
 						_elm_lang$core$Random$generate,
-						_user$project$App$NewFace,
+						_user$project$SKICoding$NewFace,
 						A2(_elm_lang$core$Random$int, 1, 6))
 				};
 			case 'NewFace':
@@ -1089,7 +1127,7 @@ var _user$project$App$update = F2(
 				};
 			default:
 				var _p3 = _p2._1;
-				var screenSize = (_elm_lang$core$Native_Utils.cmp(_p3, 400) < 0) ? _user$project$App$Mobile : ((_elm_lang$core$Native_Utils.cmp(_p3, 700) < 0) ? _user$project$App$Tablet : _user$project$App$Desktop);
+				var screenSize = (_elm_lang$core$Native_Utils.cmp(_p3, 400) < 0) ? _user$project$SKICoding$Mobile : ((_elm_lang$core$Native_Utils.cmp(_p3, 700) < 0) ? _user$project$SKICoding$Tablet : _user$project$SKICoding$Desktop);
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
@@ -1099,6 +1137,6 @@ var _user$project$App$update = F2(
 				};
 		}
 	});
-var _user$project$App$main = _elm_lang$html$Html$program(
-	{init: _user$project$App$init, view: _user$project$App$view, update: _user$project$App$update, subscriptions: _user$project$App$subscriptions})();
-var _user$project$App$Roll = {ctor: 'Roll'};
+var _user$project$SKICoding$main = _elm_lang$html$Html$program(
+	{init: _user$project$SKICoding$init, view: _user$project$SKICoding$view, update: _user$project$SKICoding$update, subscriptions: _user$project$SKICoding$subscriptions})();
+var _user$project$SKICoding$Roll = {ctor: 'Roll'};
