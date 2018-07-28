@@ -43,9 +43,9 @@ topLine =
 
 jumbo =
     div [ arial_s, center_s, style [ "clear" => "right" ] ]
-        [ span [ fontSize_percent_s 700, pad2_s 16 0, italic_s, bold_s, maxWidth_s 700 ]
+        [ span [ fontSize_percent_s 300, pad2_s 16 0, italic_s, bold_s, maxWidth_s 700 ]
             [ "SKI" |> text ]
-        , span [ fontSize_percent_s 300, pad2_s 1 0, bold_s ]
+        , span [ fontSize_percent_s 200, pad2_s 1 0, bold_s ]
             [ " Coding" |> text ]
 
         --, div [ size 26 8 ] [ text "Coding lessons for kids" ]
@@ -225,7 +225,6 @@ view : Model -> Html.Html Msg
 view model =
     div [ fontSize_percent_s 100 ]
         [ div [ pad2_s 50 0, style1_s, center_s, width_s 100 ] [ jumbo ]
-        , div [ pad2_s 50 0, style2_s, center_s, width_s 100, fontSize_percent_s 500 ] [ (toString model.i ++ "x" ++ toString model.j) |> text ]
         , div [ pad2_s 50 0, style2_s, center_s, width_s 100 ] [ introduction ]
         , div [ pad2_s 50 0, style3_s, center_s, width_s 100 ] [ aboutClass ]
         , div [ pad2_s 50 0, style2_s, center_s, width_s 100 ] [ expectedResults ]

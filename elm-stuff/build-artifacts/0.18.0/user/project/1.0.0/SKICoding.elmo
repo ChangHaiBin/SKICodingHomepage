@@ -1,726 +1,136 @@
-var _user$project$SKICoding$contactUs = A2(
-	_elm_lang$html$Html$div,
+var _user$project$SKICoding$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$none;
+};
+var _user$project$SKICoding$combineResult = function (result) {
+	var _p0 = result;
+	if (_p0.ctor === 'Err') {
+		return _p0._0;
+	} else {
+		return _p0._0;
+	}
+};
+var _user$project$SKICoding$onKeyDown = function (tagger) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'keydown',
+		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$keyCode));
+};
+var _user$project$SKICoding$style10_s = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
-		_0: _user$project$Style$width_s(80),
+		_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', '#FFFFFF'),
 		_1: {
 			ctor: '::',
-			_0: _user$project$Style$arial_s,
+			_0: A2(_user$project$Style_ops['=>'], 'color', '#000000'),
 			_1: {
 				ctor: '::',
-				_0: _user$project$Style$left_s,
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$maxWidth_s(700),
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$h1,
-			{
-				ctor: '::',
-				_0: _user$project$Style$bold_s,
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('CONTACT US'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$h4,
-				{ctor: '[]'},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('Email: skicodingschool (AT) gmail.com'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$h4,
-					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('Phone/Whatsapp: +65 9821 1538'),
-						_1: {ctor: '[]'}
-					}),
+				_0: A2(_user$project$Style_ops['=>'], 'font-family', 'Arial'),
 				_1: {ctor: '[]'}
 			}
 		}
 	});
-var _user$project$SKICoding$expectedResults = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$arial_s,
-		_1: {
-			ctor: '::',
-			_0: _user$project$Style$width_s(80),
-			_1: {
-				ctor: '::',
-				_0: _user$project$Style$left_s,
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$maxWidth_s(700),
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$h2,
-			{
-				ctor: '::',
-				_0: _user$project$Style$center_s,
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$fontSize_s(36),
-					_1: {ctor: '[]'}
-				}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('Solve Complex Problems'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$p,
-				{
-					ctor: '::',
-					_0: _user$project$Style$fontSize_s(16),
-					_1: {ctor: '[]'}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('At the end of the program, your kid should be able to answer the following questions using math and computer:'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$ol,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$style(
-							{
-								ctor: '::',
-								_0: A2(_user$project$Style_ops['=>'], 'type', '1'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {
-							ctor: '::',
-							_0: _user$project$Style$left_s,
-							_1: {
-								ctor: '::',
-								_0: _user$project$Style$fontSize_s(16),
-								_1: {ctor: '[]'}
-							}
-						}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$li,
-							{
-								ctor: '::',
-								_0: A2(_user$project$Style$pad2_s, 10, 0),
-								_1: {ctor: '[]'}
+var _user$project$SKICoding$Model = F3(
+	function (a, b, c) {
+		return {answer: a, response: b, userInput: c};
+	});
+var _user$project$SKICoding$KeyDown = function (a) {
+	return {ctor: 'KeyDown', _0: a};
+};
+var _user$project$SKICoding$UpdateUserInput = function (a) {
+	return {ctor: 'UpdateUserInput', _0: a};
+};
+var _user$project$SKICoding$NewGame = function (a) {
+	return {ctor: 'NewGame', _0: a};
+};
+var _user$project$SKICoding$init = {
+	ctor: '_Tuple2',
+	_0: {answer: 50, response: 'New Game. A number from 1 to 99 was chosen.', userInput: ''},
+	_1: A2(
+		_elm_lang$core$Random$generate,
+		_user$project$SKICoding$NewGame,
+		A2(_elm_lang$core$Random$int, 1, 99))
+};
+var _user$project$SKICoding$CheckAnswer = {ctor: 'CheckAnswer'};
+var _user$project$SKICoding$update = F2(
+	function (msg, model) {
+		var _p1 = msg;
+		switch (_p1.ctor) {
+			case 'Roll':
+				return {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: A2(
+						_elm_lang$core$Random$generate,
+						_user$project$SKICoding$NewGame,
+						A2(_elm_lang$core$Random$int, 1, 99))
+				};
+			case 'NewGame':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{answer: _p1._0, response: 'New Game. A number from 1 to 99 was chosen.'}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'UpdateUserInput':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{userInput: _p1._0}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'CheckAnswer':
+				var response = _user$project$SKICoding$combineResult(
+					A2(
+						_elm_lang$core$Result$map,
+						function (a) {
+							return (_elm_lang$core$Native_Utils.cmp(model.answer, a) > 0) ? A2(
+								_elm_lang$core$Basics_ops['++'],
+								'The correct answer is more than ',
+								_elm_lang$core$Basics$toString(a)) : ((_elm_lang$core$Native_Utils.cmp(model.answer, a) < 0) ? A2(
+								_elm_lang$core$Basics_ops['++'],
+								'The correct answer is less than ',
+								_elm_lang$core$Basics$toString(a)) : A2(
+								_elm_lang$core$Basics_ops['++'],
+								'The correct answer is ',
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									_elm_lang$core$Basics$toString(a),
+									'. You win!')));
+						},
+						A2(
+							_elm_lang$core$Result$andThen,
+							function (a) {
+								return ((_elm_lang$core$Native_Utils.cmp(a, 1) < 0) || (_elm_lang$core$Native_Utils.cmp(a, 99) > 0)) ? _elm_lang$core$Result$Err('Your input exceeds the range of 1 to 99') : _elm_lang$core$Result$Ok(a);
 							},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('What is the sum of all prime numbers from 2 to 10000?'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$li,
-								{
-									ctor: '::',
-									_0: A2(_user$project$Style$pad2_s, 10, 0),
-									_1: {ctor: '[]'}
+							A2(
+								_elm_lang$core$Result$mapError,
+								function (_p2) {
+									return 'Your input is not a valid integer.';
 								},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('In a shopping list, you are given a list of products, the price for each item, and the quantity bought for each item. What is the total price of all item bought?'),
-									_1: {ctor: '[]'}
-								}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$li,
-									{
-										ctor: '::',
-										_0: A2(_user$project$Style$pad2_s, 10, 0),
-										_1: {ctor: '[]'}
-									},
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html$text('Starting from the origin, you are given a list of commands (e.g. walk North for 200m, walk SouthEast for 100m, etc.). Calculate the final location.'),
-										_1: {ctor: '[]'}
-									}),
-								_1: {ctor: '[]'}
-							}
-						}
-					}),
-				_1: {ctor: '[]'}
-			}
-		}
-	});
-var _user$project$SKICoding$lessonInfo = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$arial_s,
-		_1: {
-			ctor: '::',
-			_0: _user$project$Style$width_s(80),
-			_1: {
-				ctor: '::',
-				_0: _user$project$Style$left_s,
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$maxWidth_s(700),
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$h2,
-			{
-				ctor: '::',
-				_0: _user$project$Style$left_s,
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$fontSize_s(36),
-					_1: {ctor: '[]'}
-				}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('Lesson Info'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$div,
-				{
-					ctor: '::',
-					_0: A2(_user$project$Style$pad2_s, 10, 0),
-					_1: {
-						ctor: '::',
-						_0: _user$project$Style$fontSize_s(16),
-						_1: {ctor: '[]'}
-					}
-				},
-				{
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$h3,
-						{
-							ctor: '::',
-							_0: _user$project$Style$fontSize_s(28),
-							_1: {ctor: '[]'}
+								_elm_lang$core$String$toInt(model.userInput)))));
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{response: response}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				return _elm_lang$core$Native_Utils.eq(_p1._0, 13) ? {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: A2(
+						_elm_lang$core$Platform_Cmd$map,
+						function (_p3) {
+							return _user$project$SKICoding$CheckAnswer;
 						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('1-1 Lessons'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$p,
-							{ctor: '[]'},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('Number of Lessons: 10'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$p,
-								{ctor: '[]'},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('Length of each lesson: 1.5 hr'),
-									_1: {ctor: '[]'}
-								}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$p,
-									{ctor: '[]'},
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html$text('Price: S$ 600'),
-										_1: {ctor: '[]'}
-									}),
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$p,
-					{ctor: '[]'},
-					{ctor: '[]'}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$h3,
-						{
-							ctor: '::',
-							_0: A4(_user$project$Style$pad4_s, 50, 0, 0, 0),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Group Lessons'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$p,
-							{ctor: '[]'},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('Details coming soon.'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
+						_elm_lang$core$Platform_Cmd$none)
+				} : {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 		}
 	});
-var _user$project$SKICoding$aboutTeacher = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$arial_s,
-		_1: {
-			ctor: '::',
-			_0: _user$project$Style$width_s(80),
-			_1: {
-				ctor: '::',
-				_0: _user$project$Style$maxWidth_s(700),
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$fontSize_s(16),
-					_1: {
-						ctor: '::',
-						_0: _user$project$Style$left_s,
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$img,
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$src('myPhoto.jpg'),
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$center_s,
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$style(
-							{
-								ctor: '::',
-								_0: A2(_user$project$Style_ops['=>'], 'alt', 'INSERT PHOTO HERE'),
-								_1: {
-									ctor: '::',
-									_0: A2(_user$project$Style_ops['=>'], 'height', '200'),
-									_1: {
-										ctor: '::',
-										_0: A2(_user$project$Style_ops['=>'], 'width', '200'),
-										_1: {ctor: '[]'}
-									}
-								}
-							}),
-						_1: {ctor: '[]'}
-					}
-				}
-			},
-			{ctor: '[]'}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$h2,
-				{
-					ctor: '::',
-					_0: _user$project$Style$fontSize_s(36),
-					_1: {
-						ctor: '::',
-						_0: _user$project$Style$bold_s,
-						_1: {ctor: '[]'}
-					}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('Instructor: Mr. Chang'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$h2,
-					{
-						ctor: '::',
-						_0: _user$project$Style$fontSize_s(28),
-						_1: {
-							ctor: '::',
-							_0: _user$project$Style$bold_s,
-							_1: {ctor: '[]'}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('M.Sc. (Math), University of Michigan '),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$h2,
-						{
-							ctor: '::',
-							_0: _user$project$Style$fontSize_s(28),
-							_1: {
-								ctor: '::',
-								_0: _user$project$Style$bold_s,
-								_1: {ctor: '[]'}
-							}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('B.Sc. (Math, 1st Class Hons), NUS '),
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$p,
-							{
-								ctor: '::',
-								_0: _user$project$Style$left_s,
-								_1: {ctor: '[]'}
-							},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('A passionate mathematics major, Mr. Chang believes that mathematics is a great tool to understand the world.'),
-								_1: {ctor: '[]'}
-							}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$p,
-								{
-									ctor: '::',
-									_0: _user$project$Style$left_s,
-									_1: {ctor: '[]'}
-								},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('Mr. Chang\'s goal is to bring university-level coding skills to young children, to link their primary school math education to real-life problem-solving.'),
-									_1: {ctor: '[]'}
-								}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$p,
-									{
-										ctor: '::',
-										_0: _user$project$Style$left_s,
-										_1: {ctor: '[]'}
-									},
-									{
-										ctor: '::',
-										_0: _elm_lang$html$Html$text('Mr. Chang previously taught Calculus in University of Michigan, and taught Math Olympiad to Primary School students in Singapore.'),
-										_1: {ctor: '[]'}
-									}),
-								_1: {
-									ctor: '::',
-									_0: A2(
-										_elm_lang$html$Html$p,
-										{
-											ctor: '::',
-											_0: _user$project$Style$left_s,
-											_1: {ctor: '[]'}
-										},
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html$text('He is currently a Financial Engineer at Numerical Technologies, a risk-management software company.'),
-											_1: {ctor: '[]'}
-										}),
-									_1: {ctor: '[]'}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	});
-var _user$project$SKICoding$aboutClass = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$width_s(80),
-		_1: {
-			ctor: '::',
-			_0: _user$project$Style$arial_s,
-			_1: {
-				ctor: '::',
-				_0: _user$project$Style$left_s,
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$maxWidth_s(700),
-					_1: {
-						ctor: '::',
-						_0: _user$project$Style$fontSize_s(16),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$h2,
-			{
-				ctor: '::',
-				_0: _user$project$Style$fontSize_percent_s(200),
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$center_s,
-					_1: {
-						ctor: '::',
-						_0: A2(_user$project$Style$pad2_s, 10, 0),
-						_1: {ctor: '[]'}
-					}
-				}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('...for good Mathematics Students'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$p,
-				{ctor: '[]'},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('The lessons are designed for students who are well-versed in mathematics, e.g. participated in Math-Olympiad competition, or Secondary School and above.'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$p,
-					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('This allows us to focus on the computational part of the coding, and to use primary school mathematics to solve real-life problems.'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$p,
-						{ctor: '[]'},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('Parents with primary school kids are encouraged to contact us to schedule an assessment test. A supplement course is available for students that needs extra math background training.'),
-							_1: {ctor: '[]'}
-						}),
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	});
-var _user$project$SKICoding$introduction = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$width_s(80),
-		_1: {
-			ctor: '::',
-			_0: _user$project$Style$arial_s,
-			_1: {
-				ctor: '::',
-				_0: _user$project$Style$maxWidth_s(700),
-				_1: {ctor: '[]'}
-			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$h2,
-			{
-				ctor: '::',
-				_0: _user$project$Style$fontSize_percent_s(200),
-				_1: {
-					ctor: '::',
-					_0: _user$project$Style$bold_s,
-					_1: {ctor: '[]'}
-				}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('Math-Oriented Coding Lessons...'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$p,
-				{
-					ctor: '::',
-					_0: _user$project$Style$left_s,
-					_1: {
-						ctor: '::',
-						_0: A2(_user$project$Style$pad2_s, 20, 0),
-						_1: {ctor: '[]'}
-					}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('SKI Coding School provides math-oriented coding programs for students aged 10 to 18. Our lesons include semester weekly coding classes and holiday intensive classes.'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {ctor: '[]'}
-		}
-	});
-var _user$project$SKICoding$jumbo = A2(
-	_elm_lang$html$Html$div,
-	{
-		ctor: '::',
-		_0: _user$project$Style$arial_s,
-		_1: {
-			ctor: '::',
-			_0: _user$project$Style$center_s,
-			_1: {
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$style(
-					{
-						ctor: '::',
-						_0: A2(_user$project$Style_ops['=>'], 'clear', 'right'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {ctor: '[]'}
-			}
-		}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$span,
-			{
-				ctor: '::',
-				_0: _user$project$Style$fontSize_percent_s(700),
-				_1: {
-					ctor: '::',
-					_0: A2(_user$project$Style$pad2_s, 16, 0),
-					_1: {
-						ctor: '::',
-						_0: _user$project$Style$italic_s,
-						_1: {
-							ctor: '::',
-							_0: _user$project$Style$bold_s,
-							_1: {
-								ctor: '::',
-								_0: _user$project$Style$maxWidth_s(700),
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('SKI'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$span,
-				{
-					ctor: '::',
-					_0: _user$project$Style$fontSize_percent_s(300),
-					_1: {
-						ctor: '::',
-						_0: A2(_user$project$Style$pad2_s, 1, 0),
-						_1: {
-							ctor: '::',
-							_0: _user$project$Style$bold_s,
-							_1: {ctor: '[]'}
-						}
-					}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(' Coding'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$p,
-					{
-						ctor: '::',
-						_0: _user$project$Style$fontSize_percent_s(100),
-						_1: {
-							ctor: '::',
-							_0: A2(_user$project$Style$pad2_s, 8, 0),
-							_1: {ctor: '[]'}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('Learn coding through Primary School Math!'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$br,
-						{ctor: '[]'},
-						{ctor: '[]'}),
-					_1: {ctor: '[]'}
-				}
-			}
-		}
-	});
+var _user$project$SKICoding$Roll = {ctor: 'Roll'};
 var _user$project$SKICoding$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -738,7 +148,7 @@ var _user$project$SKICoding$view = function (model) {
 					_0: A2(_user$project$Style$pad2_s, 50, 0),
 					_1: {
 						ctor: '::',
-						_0: _user$project$Style$style1_s,
+						_0: _user$project$SKICoding$style10_s,
 						_1: {
 							ctor: '::',
 							_0: _user$project$Style$center_s,
@@ -752,114 +162,42 @@ var _user$project$SKICoding$view = function (model) {
 				},
 				{
 					ctor: '::',
-					_0: _user$project$SKICoding$jumbo,
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
-						ctor: '::',
-						_0: A2(_user$project$Style$pad2_s, 50, 0),
-						_1: {
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
 							ctor: '::',
-							_0: _user$project$Style$style2_s,
+							_0: _user$project$Style$arial_s,
 							_1: {
 								ctor: '::',
 								_0: _user$project$Style$center_s,
 								_1: {
 									ctor: '::',
-									_0: _user$project$Style$width_s(100),
-									_1: {
-										ctor: '::',
-										_0: _user$project$Style$fontSize_percent_s(500),
-										_1: {ctor: '[]'}
-									}
-								}
-							}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text(
-							A2(
-								_elm_lang$core$Basics_ops['++'],
-								_elm_lang$core$Basics$toString(model.i),
-								A2(
-									_elm_lang$core$Basics_ops['++'],
-									'x',
-									_elm_lang$core$Basics$toString(model.j)))),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: A2(_user$project$Style$pad2_s, 50, 0),
-							_1: {
-								ctor: '::',
-								_0: _user$project$Style$style2_s,
-								_1: {
-									ctor: '::',
-									_0: _user$project$Style$center_s,
-									_1: {
-										ctor: '::',
-										_0: _user$project$Style$width_s(100),
-										_1: {ctor: '[]'}
-									}
+									_0: _elm_lang$html$Html_Attributes$style(
+										{
+											ctor: '::',
+											_0: A2(_user$project$Style_ops['=>'], 'clear', 'right'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
 								}
 							}
 						},
 						{
 							ctor: '::',
-							_0: _user$project$SKICoding$introduction,
-							_1: {ctor: '[]'}
-						}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$div,
-							{
-								ctor: '::',
-								_0: A2(_user$project$Style$pad2_s, 50, 0),
-								_1: {
-									ctor: '::',
-									_0: _user$project$Style$style3_s,
-									_1: {
-										ctor: '::',
-										_0: _user$project$Style$center_s,
-										_1: {
-											ctor: '::',
-											_0: _user$project$Style$width_s(100),
-											_1: {ctor: '[]'}
-										}
-									}
-								}
-							},
-							{
-								ctor: '::',
-								_0: _user$project$SKICoding$aboutClass,
-								_1: {ctor: '[]'}
-							}),
-						_1: {
-							ctor: '::',
 							_0: A2(
-								_elm_lang$html$Html$div,
+								_elm_lang$html$Html$span,
 								{
 									ctor: '::',
-									_0: A2(_user$project$Style$pad2_s, 50, 0),
+									_0: _user$project$Style$fontSize_percent_s(200),
 									_1: {
 										ctor: '::',
-										_0: _user$project$Style$style2_s,
+										_0: A2(_user$project$Style$pad2_s, 16, 0),
 										_1: {
 											ctor: '::',
-											_0: _user$project$Style$center_s,
+											_0: _user$project$Style$bold_s,
 											_1: {
 												ctor: '::',
-												_0: _user$project$Style$width_s(100),
+												_0: _user$project$Style$maxWidth_s(700),
 												_1: {ctor: '[]'}
 											}
 										}
@@ -867,276 +205,120 @@ var _user$project$SKICoding$view = function (model) {
 								},
 								{
 									ctor: '::',
-									_0: _user$project$SKICoding$expectedResults,
+									_0: _elm_lang$html$Html$text('Number Guessing Game'),
 									_1: {ctor: '[]'}
 								}),
 							_1: {
 								ctor: '::',
 								_0: A2(
-									_elm_lang$html$Html$div,
+									_elm_lang$html$Html$p,
 									{
 										ctor: '::',
-										_0: A2(_user$project$Style$pad2_s, 50, 0),
+										_0: _user$project$Style$fontSize_percent_s(100),
 										_1: {
 											ctor: '::',
-											_0: _user$project$Style$style3_s,
-											_1: {
-												ctor: '::',
-												_0: _user$project$Style$center_s,
-												_1: {
-													ctor: '::',
-													_0: _user$project$Style$width_s(100),
-													_1: {ctor: '[]'}
-												}
-											}
+											_0: A2(_user$project$Style$pad2_s, 8, 0),
+											_1: {ctor: '[]'}
 										}
 									},
 									{
 										ctor: '::',
-										_0: _user$project$SKICoding$aboutTeacher,
+										_0: _elm_lang$html$Html$text('Guess a number between 1 to 99'),
 										_1: {ctor: '[]'}
 									}),
 								_1: {
 									ctor: '::',
 									_0: A2(
-										_elm_lang$html$Html$div,
+										_elm_lang$html$Html$p,
+										{ctor: '[]'},
 										{
 											ctor: '::',
-											_0: A2(_user$project$Style$pad2_s, 50, 0),
-											_1: {
-												ctor: '::',
-												_0: _user$project$Style$style2_s,
-												_1: {
+											_0: A2(
+												_elm_lang$html$Html$input,
+												{
 													ctor: '::',
-													_0: _user$project$Style$center_s,
+													_0: _elm_lang$html$Html_Attributes$placeholder('Input'),
 													_1: {
 														ctor: '::',
-														_0: _user$project$Style$width_s(100),
-														_1: {ctor: '[]'}
+														_0: _elm_lang$html$Html_Events$onInput(_user$project$SKICoding$UpdateUserInput),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$type_('number'),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$min('1'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$max('99'),
+																	_1: {
+																		ctor: '::',
+																		_0: _user$project$SKICoding$onKeyDown(_user$project$SKICoding$KeyDown),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
 													}
-												}
+												},
+												{ctor: '[]'}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$button,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Events$onClick(_user$project$SKICoding$CheckAnswer),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html$text('GUESS'),
+														_1: {ctor: '[]'}
+													}),
+												_1: {ctor: '[]'}
 											}
-										},
-										{
-											ctor: '::',
-											_0: _user$project$SKICoding$lessonInfo,
-											_1: {ctor: '[]'}
 										}),
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_elm_lang$html$Html$div,
+											_elm_lang$html$Html$p,
+											{ctor: '[]'},
 											{
 												ctor: '::',
-												_0: A2(_user$project$Style$pad2_s, 50, 0),
-												_1: {
-													ctor: '::',
-													_0: _user$project$Style$style1_s,
-													_1: {
-														ctor: '::',
-														_0: _user$project$Style$center_s,
-														_1: {
-															ctor: '::',
-															_0: _user$project$Style$width_s(100),
-															_1: {ctor: '[]'}
-														}
-													}
-												}
-											},
-											{
-												ctor: '::',
-												_0: _user$project$SKICoding$contactUs,
+												_0: _elm_lang$html$Html$text(model.response),
 												_1: {ctor: '[]'}
 											}),
-										_1: {ctor: '[]'}
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$p,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$button,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Events$onClick(_user$project$SKICoding$Roll),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('NEW GAME'),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}),
+											_1: {ctor: '[]'}
+										}
 									}
 								}
 							}
-						}
-					}
-				}
-			}
-		});
-};
-var _user$project$SKICoding$style1 = _elm_lang$html$Html_Attributes$style(
-	{
-		ctor: '::',
-		_0: A2(_user$project$Style_ops['=>'], 'display', 'inline-block'),
-		_1: {
-			ctor: '::',
-			_0: A2(_user$project$Style_ops['=>'], 'color', 'white'),
-			_1: {
-				ctor: '::',
-				_0: A2(_user$project$Style_ops['=>'], 'text-align', 'center'),
-				_1: {
-					ctor: '::',
-					_0: A2(_user$project$Style_ops['=>'], 'padding', '14px 16px'),
-					_1: {
-						ctor: '::',
-						_0: A2(_user$project$Style_ops['=>'], 'text-decoration', 'none'),
-						_1: {ctor: '[]'}
-					}
-				}
-			}
-		}
-	});
-var _user$project$SKICoding$topLine = A2(
-	_elm_lang$html$Html$ul,
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$style(
-			{
-				ctor: '::',
-				_0: A2(_user$project$Style_ops['=>'], 'list-style-type', 'none'),
-				_1: {
-					ctor: '::',
-					_0: A2(_user$project$Style_ops['=>'], 'margin', '0'),
-					_1: {
-						ctor: '::',
-						_0: A2(_user$project$Style_ops['=>'], 'padding', '0'),
-						_1: {
-							ctor: '::',
-							_0: A2(_user$project$Style_ops['=>'], 'overflow', 'hidden'),
-							_1: {ctor: '[]'}
-						}
-					}
-				}
-			}),
-		_1: {ctor: '[]'}
-	},
-	{
-		ctor: '::',
-		_0: A2(
-			_elm_lang$html$Html$li,
-			{
-				ctor: '::',
-				_0: _user$project$SKICoding$style1,
-				_1: {ctor: '[]'}
-			},
-			{
-				ctor: '::',
-				_0: _elm_lang$html$Html$text('ASDF'),
-				_1: {ctor: '[]'}
-			}),
-		_1: {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$html$Html$li,
-				{
-					ctor: '::',
-					_0: _user$project$SKICoding$style1,
-					_1: {ctor: '[]'}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text('1234'),
-					_1: {ctor: '[]'}
-				}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$li,
-					{
-						ctor: '::',
-						_0: _user$project$SKICoding$style1,
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('PPPPPP'),
-						_1: {ctor: '[]'}
-					}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$li,
-						{
-							ctor: '::',
-							_0: _user$project$SKICoding$style1,
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html$text('KKKK'),
-							_1: {ctor: '[]'}
 						}),
 					_1: {ctor: '[]'}
-				}
-			}
-		}
-	});
-var _user$project$SKICoding$Model = F4(
-	function (a, b, c, d) {
-		return {x: a, i: b, j: c, screenSize: d};
-	});
-var _user$project$SKICoding$Desktop = {ctor: 'Desktop'};
-var _user$project$SKICoding$Tablet = {ctor: 'Tablet'};
-var _user$project$SKICoding$Mobile = {ctor: 'Mobile'};
-var _user$project$SKICoding$Resize = F2(
-	function (a, b) {
-		return {ctor: 'Resize', _0: a, _1: b};
-	});
-var _user$project$SKICoding$initialSizeCmd = A2(
-	_elm_lang$core$Task$perform,
-	function (_p0) {
-		var _p1 = _p0;
-		return A2(_user$project$SKICoding$Resize, _p1._0, _p1._1);
-	},
-	A3(
-		_elm_lang$core$Task$map2,
-		F2(
-			function (i, j) {
-				return {ctor: '_Tuple2', _0: i, _1: j};
-			}),
-		_elm_lang$window$Window$height,
-		_elm_lang$window$Window$width));
-var _user$project$SKICoding$init = {
-	ctor: '_Tuple2',
-	_0: {x: 1, i: 0, j: 0, screenSize: _user$project$SKICoding$Desktop},
-	_1: _user$project$SKICoding$initialSizeCmd
-};
-var _user$project$SKICoding$subscriptions = function (model) {
-	return _elm_lang$window$Window$resizes(
-		function (qqq) {
-			return A2(_user$project$SKICoding$Resize, qqq.height, qqq.width);
+				}),
+			_1: {ctor: '[]'}
 		});
 };
-var _user$project$SKICoding$NewFace = function (a) {
-	return {ctor: 'NewFace', _0: a};
-};
-var _user$project$SKICoding$update = F2(
-	function (msg, model) {
-		var _p2 = msg;
-		switch (_p2.ctor) {
-			case 'Roll':
-				return {
-					ctor: '_Tuple2',
-					_0: model,
-					_1: A2(
-						_elm_lang$core$Random$generate,
-						_user$project$SKICoding$NewFace,
-						A2(_elm_lang$core$Random$int, 1, 6))
-				};
-			case 'NewFace':
-				return {
-					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{x: _p2._0}),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
-			default:
-				var _p3 = _p2._1;
-				var screenSize = (_elm_lang$core$Native_Utils.cmp(_p3, 400) < 0) ? _user$project$SKICoding$Mobile : ((_elm_lang$core$Native_Utils.cmp(_p3, 700) < 0) ? _user$project$SKICoding$Tablet : _user$project$SKICoding$Desktop);
-				return {
-					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{screenSize: screenSize, i: _p2._0, j: _p3}),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
-		}
-	});
 var _user$project$SKICoding$main = _elm_lang$html$Html$program(
 	{init: _user$project$SKICoding$init, view: _user$project$SKICoding$view, update: _user$project$SKICoding$update, subscriptions: _user$project$SKICoding$subscriptions})();
-var _user$project$SKICoding$Roll = {ctor: 'Roll'};
