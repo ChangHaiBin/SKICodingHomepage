@@ -1,5 +1,12 @@
 <!DOCTYPE HTML>
-<html><head><meta charset="UTF-8"><title>SKICoding</title><style>html,head,body { padding:0; margin:0; }
+<html><head><meta charset="UTF-8"><title>SKICoding</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/A22F8DE9-4E2A-EF44-817F-A4D091D34F01/main.js" charset="UTF-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style>html,head,body { padding:0; margin:0; }
 body { font-family: calibri, helvetica, arial, sans-serif; }</style><script type="text/javascript">
 (function() {
 'use strict';
@@ -9349,6 +9356,12 @@ var _user$project$SKICoding$combineResult = function (result) {
 		return _p0._0;
 	}
 };
+var _user$project$SKICoding$onKeyDown = function (tagger) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'keydown',
+		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$keyCode));
+};
 var _user$project$SKICoding$style10_s = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
@@ -9367,6 +9380,9 @@ var _user$project$SKICoding$Model = F3(
 	function (a, b, c) {
 		return {answer: a, response: b, userInput: c};
 	});
+var _user$project$SKICoding$KeyDown = function (a) {
+	return {ctor: 'KeyDown', _0: a};
+};
 var _user$project$SKICoding$UpdateUserInput = function (a) {
 	return {ctor: 'UpdateUserInput', _0: a};
 };
@@ -9381,6 +9397,7 @@ var _user$project$SKICoding$init = {
 		_user$project$SKICoding$NewGame,
 		A2(_elm_lang$core$Random$int, 1, 99))
 };
+var _user$project$SKICoding$CheckAnswer = {ctor: 'CheckAnswer'};
 var _user$project$SKICoding$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
@@ -9410,7 +9427,7 @@ var _user$project$SKICoding$update = F2(
 						{userInput: _p1._0}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
-			default:
+			case 'CheckAnswer':
 				var response = _user$project$SKICoding$combineResult(
 					A2(
 						_elm_lang$core$Result$map,
@@ -9447,9 +9464,19 @@ var _user$project$SKICoding$update = F2(
 						{response: response}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
+			default:
+				return _elm_lang$core$Native_Utils.eq(_p1._0, 13) ? {
+					ctor: '_Tuple2',
+					_0: model,
+					_1: A2(
+						_elm_lang$core$Platform_Cmd$map,
+						function (_p3) {
+							return _user$project$SKICoding$CheckAnswer;
+						},
+						_elm_lang$core$Platform_Cmd$none)
+				} : {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
 		}
 	});
-var _user$project$SKICoding$CheckAnswer = {ctor: 'CheckAnswer'};
 var _user$project$SKICoding$Roll = {ctor: 'Roll'};
 var _user$project$SKICoding$view = function (model) {
 	return A2(
@@ -9465,17 +9492,21 @@ var _user$project$SKICoding$view = function (model) {
 				_elm_lang$html$Html$div,
 				{
 					ctor: '::',
-					_0: A2(_user$project$Style$pad2_s, 50, 0),
+					_0: _elm_lang$html$Html_Attributes$class('container'),
 					_1: {
 						ctor: '::',
-						_0: _user$project$SKICoding$style10_s,
+						_0: A2(_user$project$Style$pad2_s, 50, 0),
 						_1: {
 							ctor: '::',
-							_0: _user$project$Style$center_s,
+							_0: _user$project$SKICoding$style10_s,
 							_1: {
 								ctor: '::',
-								_0: _user$project$Style$width_s(100),
-								_1: {ctor: '[]'}
+								_0: _user$project$Style$center_s,
+								_1: {
+									ctor: '::',
+									_0: _user$project$Style$width_s(100),
+									_1: {ctor: '[]'}
+								}
 							}
 						}
 					}
@@ -9486,19 +9517,23 @@ var _user$project$SKICoding$view = function (model) {
 						_elm_lang$html$Html$div,
 						{
 							ctor: '::',
-							_0: _user$project$Style$arial_s,
+							_0: _elm_lang$html$Html_Attributes$class('text-center'),
 							_1: {
 								ctor: '::',
-								_0: _user$project$Style$center_s,
+								_0: _user$project$Style$arial_s,
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$style(
-										{
-											ctor: '::',
-											_0: A2(_user$project$Style_ops['=>'], 'clear', 'right'),
-											_1: {ctor: '[]'}
-										}),
-									_1: {ctor: '[]'}
+									_0: _user$project$Style$center_s,
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$style(
+											{
+												ctor: '::',
+												_0: A2(_user$project$Style_ops['=>'], 'clear', 'right'),
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						},
@@ -9570,7 +9605,11 @@ var _user$project$SKICoding$view = function (model) {
 																_1: {
 																	ctor: '::',
 																	_0: _elm_lang$html$Html_Attributes$max('99'),
-																	_1: {ctor: '[]'}
+																	_1: {
+																		ctor: '::',
+																		_0: _user$project$SKICoding$onKeyDown(_user$project$SKICoding$KeyDown),
+																		_1: {ctor: '[]'}
+																	}
 																}
 															}
 														}
