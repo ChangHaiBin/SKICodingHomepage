@@ -248,7 +248,7 @@ getQuestion i =
 view : Model -> Html Msg
 view model =
     div [ arial_s, center_s ]
-        [ div [ backgroundColor_s "#3498DB", width_s 100, pad2_s 10 0, whiteText_s ]
+        [ div [ backgroundColor_s "#3498DB", width_auto_s 100, pad2_s 10 0, whiteText_s ]
             [ div [ width 80 ]
                 [ h2 [ fontSize_percent_s 200 ]
                     [ "Project Euler Questions." |> text ]
@@ -256,7 +256,7 @@ view model =
                 , p [] [ "Copyright Chang Hai Bin, 2018" |> text ]
                 ]
             ]
-        , div [ backgroundColor_s "#FFAAAA", width_s 100, pad2_s 20 0 ]
+        , div [ backgroundColor_s "#FFAAAA", width_auto_s 100, pad2_s 20 0 ]
             [ h3 [] [ "Curent Question: Q" ++ toString model.question |> text ]
             , p [] [ "Change To Question: " |> text ]
             , p []
@@ -266,7 +266,7 @@ view model =
                     , backgroundColor_s "#FFAAAA"
                     , type_ "text"
                     , onInput UpdateQuestionInput
-                    , width_px_s 50
+                    , width_px_auto_s 50
                     ]
                     []
                 , span [ pad2_s 0 5 ] []
@@ -285,13 +285,13 @@ view model =
                 ]
             , p [] [ model.cannotChangeQuestion |> text ]
             ]
-        , div [ backgroundColor_s "#9ff9b3", pad2_s 30 0, width_s 100 ]
-            [ div [ width_s 80 ]
+        , div [ backgroundColor_s "#9ff9b3", pad2_s 30 0, width_auto_s 100 ]
+            [ div [ width_auto_s 80 ]
                 [ h3 [] [ "Question " ++ toString model.question |> text ]
                 , div [] [ getQuestion model.question ]
                 , h4 [ pad2_s 10 0 ] [ "Answer: " |> text ]
                 , p []
-                    [ input [ width_px_s 200, fontSize_percent_s 120, backgroundColor_s "#9ff9b3", type_ "text", onInput UpdateInput ] []
+                    [ input [ width_px_auto_s 200, fontSize_percent_s 120, backgroundColor_s "#9ff9b3", type_ "text", onInput UpdateInput ] []
                     , span [ pad2_s 0 5 ] []
                     , button
                         [ backgroundColor_s "#147714"

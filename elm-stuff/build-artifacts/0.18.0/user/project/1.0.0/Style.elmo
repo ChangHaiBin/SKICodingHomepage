@@ -95,7 +95,7 @@ var _user$project$Style$right_s = _elm_lang$html$Html_Attributes$style(
 		_0: A2(_user$project$Style_ops['=>'], 'text-align', 'right'),
 		_1: {ctor: '[]'}
 	});
-var _user$project$Style$width_s = function (i) {
+var _user$project$Style$width_auto_s = function (i) {
 	return _elm_lang$html$Html_Attributes$style(
 		{
 			ctor: '::',
@@ -117,7 +117,7 @@ var _user$project$Style$width_s = function (i) {
 			}
 		});
 };
-var _user$project$Style$width_px_s = function (i) {
+var _user$project$Style$width_px_auto_s = function (i) {
 	return _elm_lang$html$Html_Attributes$style(
 		{
 			ctor: '::',
@@ -137,6 +137,34 @@ var _user$project$Style$width_px_s = function (i) {
 					_1: {ctor: '[]'}
 				}
 			}
+		});
+};
+var _user$project$Style$height_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'height',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'%')),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Style$height_px_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'height',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'px')),
+			_1: {ctor: '[]'}
 		});
 };
 var _user$project$Style$maxWidth_s = function (i) {
@@ -318,3 +346,126 @@ var _user$project$Style$pad4_s = F4(
 				_1: {ctor: '[]'}
 			});
 	});
+var _user$project$Style$margin1_s = function (each) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'margin',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(each),
+					'px')),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Style$margin2_s = F2(
+	function (tb, lr) {
+		return _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: A2(
+					_user$project$Style_ops['=>'],
+					'margin',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(tb),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'px ',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(lr),
+								'px')))),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$Style$margin3_s = F3(
+	function (t, lr, b) {
+		return _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: A2(
+					_user$project$Style_ops['=>'],
+					'margin',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(t),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'px ',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(lr),
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'px ',
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										_elm_lang$core$Basics$toString(b),
+										'px')))))),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$Style$margin4_s = F4(
+	function (t, r, b, l) {
+		return _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: A2(
+					_user$project$Style_ops['=>'],
+					'margin',
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						_elm_lang$core$Basics$toString(t),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							'px ',
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								_elm_lang$core$Basics$toString(r),
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'px ',
+									A2(
+										_elm_lang$core$Basics_ops['++'],
+										_elm_lang$core$Basics$toString(b),
+										A2(
+											_elm_lang$core$Basics_ops['++'],
+											'px ',
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												_elm_lang$core$Basics$toString(l),
+												'px')))))))),
+				_1: {ctor: '[]'}
+			});
+	});
+var _user$project$Style$width_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'width',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'%')),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$Style$width_px_s = function (i) {
+	return _elm_lang$html$Html_Attributes$style(
+		{
+			ctor: '::',
+			_0: A2(
+				_user$project$Style_ops['=>'],
+				'width',
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					_elm_lang$core$Basics$toString(i),
+					'px')),
+			_1: {ctor: '[]'}
+		});
+};

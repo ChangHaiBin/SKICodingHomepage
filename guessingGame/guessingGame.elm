@@ -154,7 +154,7 @@ subscriptions model =
 view : Model -> Html.Html Msg
 view model =
     div [ fontSize_percent_s 100 ]
-        [ div [ pad2_s 50 0, style10_s, center_s, width_s 100 ]
+        [ div [ pad2_s 50 0, style10_s, center_s, width_auto_s 100 ]
             [ div [ arial_s, center_s, style [ "clear" => "right" ] ]
                 [ span [ fontSize_percent_s 200, pad2_s 16 0, bold_s, maxWidth_s 700 ]
                     [ "Number Guessing Game" |> text ]

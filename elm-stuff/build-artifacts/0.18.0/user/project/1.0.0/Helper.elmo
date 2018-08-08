@@ -1,0 +1,112 @@
+var _user$project$Helper$printUpperCharList = function (xs) {
+	return A3(
+		_elm_lang$core$List$foldl,
+		F2(
+			function (x, y) {
+				return A2(
+					_elm_lang$core$Basics_ops['++'],
+					x,
+					A2(_elm_lang$core$Basics_ops['++'], ' ', y));
+			}),
+		' ',
+		A2(
+			_elm_lang$core$List$map,
+			function (_p0) {
+				return _elm_lang$core$String$toUpper(
+					_elm_lang$core$String$fromChar(_p0));
+			},
+			_elm_lang$core$List$reverse(xs)));
+};
+var _user$project$Helper$listContains = F2(
+	function (x, xs) {
+		return A2(
+			_elm_lang$core$List$any,
+			F2(
+				function (x, y) {
+					return _elm_lang$core$Native_Utils.eq(x, y);
+				})(x),
+			xs);
+	});
+var _user$project$Helper$allFoundIn = F2(
+	function (xs, ys) {
+		return A2(
+			_elm_lang$core$List$all,
+			function (y) {
+				return A2(_user$project$Helper$listContains, y, xs);
+			},
+			ys);
+	});
+var _user$project$Helper$replaceIfNotFoundIn = F3(
+	function (replacement, ys, zs) {
+		return A2(
+			_elm_lang$core$List$map,
+			function (z) {
+				return A2(_user$project$Helper$listContains, z, ys) ? z : replacement;
+			},
+			zs);
+	});
+var _user$project$Helper$resultFilter = F2(
+	function (boolF, errorF) {
+		return _elm_lang$core$Result$andThen(
+			function (x) {
+				return boolF(x) ? _elm_lang$core$Result$Ok(x) : _elm_lang$core$Result$Err(
+					errorF(x));
+			});
+	});
+var _user$project$Helper$indexAt = F2(
+	function (i, xs) {
+		indexAt:
+		while (true) {
+			if (_elm_lang$core$Native_Utils.cmp(i, 0) < 0) {
+				return _elm_lang$core$Maybe$Nothing;
+			} else {
+				var _p1 = {ctor: '_Tuple2', _0: i, _1: xs};
+				if (_p1._1.ctor === '[]') {
+					return _elm_lang$core$Maybe$Nothing;
+				} else {
+					if (_p1._0 === 0) {
+						return _elm_lang$core$Maybe$Just(_p1._1._0);
+					} else {
+						var _v1 = i - 1,
+							_v2 = _p1._1._1;
+						i = _v1;
+						xs = _v2;
+						continue indexAt;
+					}
+				}
+			}
+		}
+	});
+var _user$project$Helper$numToString = function (i) {
+	var _p2 = i;
+	switch (_p2) {
+		case 6:
+			return 'A six-';
+		case 7:
+			return 'A seven-';
+		case 8:
+			return 'An eight-';
+		case 9:
+			return 'A nine-';
+		case 10:
+			return 'A ten-';
+		case 11:
+			return 'An eleven-';
+		case 12:
+			return 'A twelve-';
+		case 13:
+			return 'A thirteen-';
+		case 14:
+			return 'A fourteen-';
+		default:
+			return 'PLACEHOLDER';
+	}
+};
+var _user$project$Helper$combineResult = function (result) {
+	var _p3 = result;
+	if (_p3.ctor === 'Err') {
+		return _p3._0;
+	} else {
+		return _p3._0;
+	}
+};

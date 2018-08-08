@@ -58,7 +58,7 @@ jumbo =
 
 
 introduction =
-    div [ width_s 80, arial_s, maxWidth_s 700 ]
+    div [ width_auto_s 80, arial_s, maxWidth_s 700 ]
         [ h2 [ fontSize_percent_s 200, bold_s ] [ "Math-Oriented Coding Lessons..." |> text ]
         , p [ left_s, pad2_s 20 0 ]
             [ "SKI Coding School provides math-oriented coding programs for students aged 10 to 18. Our lesons include semester weekly coding classes and holiday intensive classes." |> text ]
@@ -66,7 +66,7 @@ introduction =
 
 
 aboutClass =
-    div [ width_s 80, arial_s, left_s, maxWidth_s 700, fontSize_s 16 ]
+    div [ width_auto_s 80, arial_s, left_s, maxWidth_s 700, fontSize_s 16 ]
         [ h2 [ fontSize_percent_s 200, center_s, pad2_s 10 0 ] [ "...for good Mathematics Students" |> text ]
         , p []
             [ "The lessons are designed for students who are well-versed in mathematics, e.g. participated in Math-Olympiad competition, or Secondary School and above." |> text ]
@@ -79,7 +79,7 @@ aboutClass =
 
 
 aboutTeacher =
-    div [ arial_s, width_s 80, maxWidth_s 700, fontSize_s 16, left_s ]
+    div [ arial_s, width_auto_s 80, maxWidth_s 700, fontSize_s 16, left_s ]
         [ img [ src "myPhoto.jpg", center_s, style [ "alt" => "INSERT PHOTO HERE", "height" => "200", "width" => "200" ] ] []
         , h2 [ fontSize_s 36, bold_s ] [ "Instructor: Mr. Chang" |> text ]
         , h2 [ fontSize_s 28, bold_s ] [ "M.Sc. (Math), University of Michigan " |> text ]
@@ -92,7 +92,7 @@ aboutTeacher =
 
 
 lessonInfo =
-    div [ arial_s, width_s 80, left_s, maxWidth_s 700 ]
+    div [ arial_s, width_auto_s 80, left_s, maxWidth_s 700 ]
         [ h2 [ left_s, fontSize_s 36 ]
             [ "Lesson Info" |> text ]
         , div
@@ -109,7 +109,7 @@ lessonInfo =
 
 
 expectedResults =
-    div [ arial_s, width_s 80, left_s, maxWidth_s 700 ]
+    div [ arial_s, width_auto_s 80, left_s, maxWidth_s 700 ]
         [ h2 [ center_s, fontSize_s 36 ] [ "Solve Complex Problems" |> text ]
         , p [ fontSize_s 16 ] [ "At the end of the program, your kid should be able to answer the following questions using math and computer:" |> text ]
         , ol [ style [ "type" => "1" ], left_s, fontSize_s 16 ]
@@ -121,7 +121,7 @@ expectedResults =
 
 
 contactUs =
-    div [ width_s 80, arial_s, left_s, maxWidth_s 700 ]
+    div [ width_auto_s 80, arial_s, left_s, maxWidth_s 700 ]
         [ h1 [ bold_s ] [ "CONTACT US" |> text ]
         , h4 [] [ "Email: skicodingschool (AT) gmail.com" |> text ]
         , h4 [] [ "Phone/Whatsapp: +65 9821 1538" |> text ]
@@ -224,13 +224,13 @@ subscriptions model =
 view : Model -> Html.Html Msg
 view model =
     div [ fontSize_percent_s 100 ]
-        [ div [ pad2_s 50 0, style1_s, center_s, width_s 100 ] [ jumbo ]
-        , div [ pad2_s 50 0, style2_s, center_s, width_s 100 ] [ introduction ]
-        , div [ pad2_s 50 0, style3_s, center_s, width_s 100 ] [ aboutClass ]
-        , div [ pad2_s 50 0, style2_s, center_s, width_s 100 ] [ expectedResults ]
-        , div [ pad2_s 50 0, style3_s, center_s, width_s 100 ] [ aboutTeacher ]
-        , div [ pad2_s 50 0, style2_s, center_s, width_s 100 ] [ lessonInfo ]
-        , div [ pad2_s 50 0, style1_s, center_s, width_s 100 ] [ contactUs ]
+        [ div [ pad2_s 50 0, style1_s, center_s, width_auto_s 100 ] [ jumbo ]
+        , div [ pad2_s 50 0, style2_s, center_s, width_auto_s 100 ] [ introduction ]
+        , div [ pad2_s 50 0, style3_s, center_s, width_auto_s 100 ] [ aboutClass ]
+        , div [ pad2_s 50 0, style2_s, center_s, width_auto_s 100 ] [ expectedResults ]
+        , div [ pad2_s 50 0, style3_s, center_s, width_auto_s 100 ] [ aboutTeacher ]
+        , div [ pad2_s 50 0, style2_s, center_s, width_auto_s 100 ] [ lessonInfo ]
+        , div [ pad2_s 50 0, style1_s, center_s, width_auto_s 100 ] [ contactUs ]
 
         {--
 

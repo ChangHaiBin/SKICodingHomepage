@@ -1482,7 +1482,7 @@ var _user$project$ProjectEulerModified$view = function (model) {
 					_0: _user$project$Style$backgroundColor_s('#3498DB'),
 					_1: {
 						ctor: '::',
-						_0: _user$project$Style$width_s(100),
+						_0: _user$project$Style$width_auto_s(100),
 						_1: {
 							ctor: '::',
 							_0: A2(_user$project$Style$pad2_s, 10, 0),
@@ -1552,7 +1552,7 @@ var _user$project$ProjectEulerModified$view = function (model) {
 						_0: _user$project$Style$backgroundColor_s('#FFAAAA'),
 						_1: {
 							ctor: '::',
-							_0: _user$project$Style$width_s(100),
+							_0: _user$project$Style$width_auto_s(100),
 							_1: {
 								ctor: '::',
 								_0: A2(_user$project$Style$pad2_s, 20, 0),
@@ -1615,7 +1615,7 @@ var _user$project$ProjectEulerModified$view = function (model) {
 																_0: _elm_lang$html$Html_Events$onInput(_user$project$ProjectEulerModified$UpdateQuestionInput),
 																_1: {
 																	ctor: '::',
-																	_0: _user$project$Style$width_px_s(50),
+																	_0: _user$project$Style$width_px_auto_s(50),
 																	_1: {ctor: '[]'}
 																}
 															}
@@ -1708,7 +1708,7 @@ var _user$project$ProjectEulerModified$view = function (model) {
 								_0: A2(_user$project$Style$pad2_s, 30, 0),
 								_1: {
 									ctor: '::',
-									_0: _user$project$Style$width_s(100),
+									_0: _user$project$Style$width_auto_s(100),
 									_1: {ctor: '[]'}
 								}
 							}
@@ -1719,7 +1719,7 @@ var _user$project$ProjectEulerModified$view = function (model) {
 								_elm_lang$html$Html$div,
 								{
 									ctor: '::',
-									_0: _user$project$Style$width_s(80),
+									_0: _user$project$Style$width_auto_s(80),
 									_1: {ctor: '[]'}
 								},
 								{
@@ -1771,7 +1771,7 @@ var _user$project$ProjectEulerModified$view = function (model) {
 															_elm_lang$html$Html$input,
 															{
 																ctor: '::',
-																_0: _user$project$Style$width_px_s(200),
+																_0: _user$project$Style$width_px_auto_s(200),
 																_1: {
 																	ctor: '::',
 																	_0: _user$project$Style$fontSize_percent_s(120),

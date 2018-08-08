@@ -67,12 +67,20 @@ right_s =
     style [ "text-align" => "right" ]
 
 
-width_s i =
+width_auto_s i =
     style [ "width" => (toString i ++ "%"), "margin-left" => "auto", "margin-right" => "auto" ]
 
 
-width_px_s i =
+width_px_auto_s i =
     style [ "width" => (toString i ++ "px"), "margin-left" => "auto", "margin-right" => "auto" ]
+
+
+height_s i =
+    style [ "height" => (toString i ++ "%") ]
+
+
+height_px_s i =
+    style [ "height" => (toString i ++ "px") ]
 
 
 maxWidth_s i =
@@ -129,3 +137,27 @@ pad3_s t lr b =
 
 pad4_s t r b l =
     style [ "padding" => (toString t ++ "px " ++ toString r ++ "px " ++ toString b ++ "px " ++ toString l ++ "px") ]
+
+
+margin1_s each =
+    style [ "margin" => (toString each ++ "px") ]
+
+
+margin2_s tb lr =
+    style [ "margin" => (toString tb ++ "px " ++ toString lr ++ "px") ]
+
+
+margin3_s t lr b =
+    style [ "margin" => (toString t ++ "px " ++ toString lr ++ "px " ++ toString b ++ "px") ]
+
+
+margin4_s t r b l =
+    style [ "margin" => (toString t ++ "px " ++ toString r ++ "px " ++ toString b ++ "px " ++ toString l ++ "px") ]
+
+
+width_s i =
+    style [ "width" => (toString i ++ "%") ]
+
+
+width_px_s i =
+    style [ "width" => (toString i ++ "px") ]
