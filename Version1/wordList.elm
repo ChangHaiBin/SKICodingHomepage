@@ -20,7 +20,6 @@ wordList =
     , "arrive"
     , "attack"
     , "autumn"
-    , "awaybaby"
     , "basket"
     , "beautiful"
     , "bedroom"

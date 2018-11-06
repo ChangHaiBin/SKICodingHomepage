@@ -37,10 +37,12 @@
 </style>
   </head>
 <body style="background-color: #F9F9F9">
-<ul class="header">
+<ul class="header" id="myTopnav">
   <li><a class="active" href="index.html"><span style="font-style: italic; font-weight: bold">S.K.I.</span> Coding</a></li>
   <li><a href="curriculum.html">Curriculum</a></li>
   <li><a href="faq.html">F.A.Q.</a></li>
+  
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </ul>
 <div class="jumbotron text-center" style="height: 300px;">
   <h1 style="font-weight: bold; user-select: none; "><span style="font-style: italic;  font-size: 200%">S.K.I.</span> Coding</h1>
@@ -76,6 +78,18 @@
 		</div>
 	</div>
 </div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "header") {
+        x.className += " responsive";
+    } else {
+        x.className = "header";
+    }
+}
+</script>
+
 
 </body>
 </html>

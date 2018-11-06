@@ -97,7 +97,7 @@ update msg model =
 
                     ( newNumTries, newResponse ) =
                         if model.answer |> String.toList |> listContains keyChar |> not then
-                            ( model.numTries - 1, "The answer does NOT contain the letter " ++ (keyChar |> String.fromChar |> String.toUpper) )
+                            ( model.numTries - 1, "The answer does NOT contain the letter " ++ (keyChar |> String.fromChar |> String.toUpper) ++ ". (-1 Chance)." )
                         else
                             ( model.numTries, "The answer contains the letter " ++ (keyChar |> String.fromChar |> String.toUpper) )
 
@@ -134,7 +134,7 @@ update msg model =
                 , response = "New Game."
                 , gameState = (selectedWord |> String.length |> numToString) ++ "letter word has been chosen."
                 , userGuesses = []
-                , numTries = 6
+                , numTries = 7
                 , win = False
               }
             , Cmd.none
@@ -194,6 +194,7 @@ view model =
                 , p [ fontSize_percent_s 100 ] [ text model.response ]
                 , p [ fontSize_percent_s 100 ] [ text ("Previous guess: " ++ (model.userGuesses |> List.reverse |> printUpperCharList)) ]
                 , p [ fontSize_percent_s 100 ] [ text ("You have " ++ (model.numTries |> toString) ++ " chance(s) remaining.") ]
+                , p [ fontSize_percent_s 100 ] [ text "Chances are deducted only when you guess a wrong letter." ]
                 , p [ fontSize_percent_s 100 ] [ text model.gameState ]
                 , p [] [ button [ onClick Roll, fontSize_percent_s 100 ] [ text "NEW GAME" ] ]
                 ]

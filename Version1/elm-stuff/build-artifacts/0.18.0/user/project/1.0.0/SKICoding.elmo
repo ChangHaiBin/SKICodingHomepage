@@ -1,0 +1,428 @@
+var _user$project$SKICoding$color = F3(
+	function (i, j, grid) {
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			_user$project$Style$backgroundColor_s('#000000'),
+			A2(
+				_elm_lang$core$Maybe$map,
+				function (tf) {
+					return tf ? _user$project$Style$backgroundColor_s('#2E8B57') : _user$project$Style$backgroundColor_s('#EEEEEE');
+				},
+				A2(
+					_elm_lang$core$Maybe$andThen,
+					_user$project$Helper$indexAt(j),
+					A2(_user$project$Helper$indexAt, i, grid))));
+	});
+var _user$project$SKICoding$subscriptions = function (model) {
+	return _elm_lang$core$Platform_Sub$none;
+};
+var _user$project$SKICoding$init = function () {
+	var nCol = 5;
+	var nRow = 5;
+	return {
+		ctor: '_Tuple2',
+		_0: {
+			grid: A2(
+				_elm_lang$core$List$repeat,
+				nRow,
+				A2(_elm_lang$core$List$repeat, nCol, false)),
+			nCol: nCol,
+			nRow: nRow,
+			status: false,
+			userInput: _elm_lang$core$Maybe$Nothing,
+			errorMessage: ''
+		},
+		_1: _elm_lang$core$Platform_Cmd$none
+	};
+}();
+var _user$project$SKICoding$contains = F2(
+	function (x, xs) {
+		return A2(
+			_elm_lang$core$List$any,
+			F2(
+				function (x, y) {
+					return _elm_lang$core$Native_Utils.eq(x, y);
+				})(x),
+			xs);
+	});
+var _user$project$SKICoding$listMapi = F2(
+	function (f, xs) {
+		var len = _elm_lang$core$List$length(xs);
+		return A3(
+			_elm_lang$core$List$map2,
+			f,
+			A2(_elm_lang$core$List$range, 0, len - 1),
+			xs);
+	});
+var _user$project$SKICoding$mapij = F2(
+	function (f, xss) {
+		return A2(
+			_user$project$SKICoding$listMapi,
+			function (_p0) {
+				return _user$project$SKICoding$listMapi(
+					f(_p0));
+			},
+			xss);
+	});
+var _user$project$SKICoding$update = F2(
+	function (msg, model) {
+		var _p1 = msg;
+		switch (_p1.ctor) {
+			case 'Roll':
+				var wordLength = _elm_lang$core$List$length(_user$project$WordList$wordList);
+				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+			case 'Change':
+				var _p7 = _p1._1;
+				var _p6 = _p1._0;
+				var candidates = A2(
+					_elm_lang$core$List$filter,
+					function (_p2) {
+						var _p3 = _p2;
+						var _p5 = _p3._1;
+						var _p4 = _p3._0;
+						return (_elm_lang$core$Native_Utils.cmp(0, _p4) < 1) && ((_elm_lang$core$Native_Utils.cmp(_p4, model.nRow) < 0) && ((_elm_lang$core$Native_Utils.cmp(0, _p5) < 1) && (_elm_lang$core$Native_Utils.cmp(_p5, model.nCol) < 0)));
+					},
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: _p6, _1: _p7},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: _p6 + 1, _1: _p7},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: _p6 - 1, _1: _p7},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: _p6, _1: _p7 + 1},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: _p6, _1: _p7 - 1},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					});
+				var newGrid = A2(
+					_user$project$SKICoding$mapij,
+					F3(
+						function (x, y, val) {
+							return A2(
+								_user$project$SKICoding$contains,
+								{ctor: '_Tuple2', _0: x, _1: y},
+								candidates) ? (!val) : val;
+						}),
+					model.grid);
+				var newStatus = A2(
+					_elm_lang$core$List$all,
+					_elm_lang$core$List$all(_elm_lang$core$Basics$identity),
+					newGrid);
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{grid: newGrid, status: newStatus}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'ResetGame':
+				var _p8 = model.userInput;
+				if (_p8.ctor === 'Nothing') {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				} else {
+					var _p9 = _p8._0;
+					var newStatus = false;
+					var newGrid = A2(
+						_elm_lang$core$List$repeat,
+						_p9,
+						A2(_elm_lang$core$List$repeat, _p9, false));
+					var nCol = _p9;
+					var nRow = _p9;
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{grid: newGrid, nRow: nRow, nCol: nCol, status: newStatus}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			default:
+				return function (temp) {
+					var _p10 = temp;
+					if (_p10.ctor === 'Err') {
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{errorMessage: _p10._0, userInput: _elm_lang$core$Maybe$Nothing}),
+							_1: _elm_lang$core$Platform_Cmd$none
+						};
+					} else {
+						return {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Native_Utils.update(
+								model,
+								{
+									errorMessage: '',
+									userInput: _elm_lang$core$Maybe$Just(_p10._0)
+								}),
+							_1: _elm_lang$core$Platform_Cmd$none
+						};
+					}
+				}(
+					A2(
+						_elm_lang$core$Result$andThen,
+						function (i) {
+							return ((_elm_lang$core$Native_Utils.cmp(i, 0) < 1) || (_elm_lang$core$Native_Utils.cmp(i, 10) > 0)) ? _elm_lang$core$Result$Err('Please input a range between 1 to 10') : _elm_lang$core$Result$Ok(i);
+						},
+						_elm_lang$core$String$toInt(_p1._0)));
+		}
+	});
+var _user$project$SKICoding$style10_s = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: A2(_user$project$Style_ops['=>'], 'backgroundColor', '#FFFFFF'),
+		_1: {
+			ctor: '::',
+			_0: A2(_user$project$Style_ops['=>'], 'color', '#000000'),
+			_1: {
+				ctor: '::',
+				_0: A2(_user$project$Style_ops['=>'], 'font-family', 'Arial'),
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _user$project$SKICoding$Model = F6(
+	function (a, b, c, d, e, f) {
+		return {grid: a, nCol: b, nRow: c, status: d, userInput: e, errorMessage: f};
+	});
+var _user$project$SKICoding$UpdateUserInput = function (a) {
+	return {ctor: 'UpdateUserInput', _0: a};
+};
+var _user$project$SKICoding$ResetGame = {ctor: 'ResetGame'};
+var _user$project$SKICoding$Change = F2(
+	function (a, b) {
+		return {ctor: 'Change', _0: a, _1: b};
+	});
+var _user$project$SKICoding$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _user$project$Style$fontSize_percent_s(150),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: A2(_user$project$Style$pad2_s, 50, 0),
+					_1: {
+						ctor: '::',
+						_0: _user$project$SKICoding$style10_s,
+						_1: {
+							ctor: '::',
+							_0: _user$project$Style$center_s,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Style$width_s(100),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _user$project$Style$arial_s,
+							_1: {
+								ctor: '::',
+								_0: _user$project$Style$center_s,
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$style(
+										{
+											ctor: '::',
+											_0: A2(_user$project$Style_ops['=>'], 'clear', 'right'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
+							}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$span,
+								{
+									ctor: '::',
+									_0: _user$project$Style$fontSize_percent_s(100),
+									_1: {
+										ctor: '::',
+										_0: A2(_user$project$Style$pad2_s, 16, 0),
+										_1: {
+											ctor: '::',
+											_0: _user$project$Style$bold_s,
+											_1: {
+												ctor: '::',
+												_0: _user$project$Style$maxWidth_s(700),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('Button Pressing Game'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$p,
+									{ctor: '[]'},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Each button will modify the color of itself'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$p,
+										{ctor: '[]'},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('and its neighbors (up, down, left, right)'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$p,
+											{ctor: '[]'},
+											A2(
+												_user$project$SKICoding$listMapi,
+												F2(
+													function (i, xs) {
+														return A2(
+															_elm_lang$html$Html$div,
+															{ctor: '[]'},
+															A2(
+																_user$project$SKICoding$listMapi,
+																F2(
+																	function (j, x) {
+																		return A2(
+																			_elm_lang$html$Html$button,
+																			{
+																				ctor: '::',
+																				_0: _user$project$Style$width_px_s(50),
+																				_1: {
+																					ctor: '::',
+																					_0: _user$project$Style$height_px_s(50),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(_user$project$Style$margin2_s, 5, 5),
+																						_1: {
+																							ctor: '::',
+																							_0: A3(_user$project$SKICoding$color, i, j, model.grid),
+																							_1: {
+																								ctor: '::',
+																								_0: _elm_lang$html$Html_Events$onClick(
+																									A2(_user$project$SKICoding$Change, i, j)),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			},
+																			{ctor: '[]'});
+																	}),
+																xs));
+													}),
+												model.grid)),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$p,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text(
+														model.status ? 'You Win!' : 'Keep trying'),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$p,
+													{ctor: '[]'},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$input,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$placeholder('Input'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Events$onInput(_user$project$SKICoding$UpdateUserInput),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$type_('number'),
+																		_1: {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$min('1'),
+																			_1: {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$max('99'),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																}
+															},
+															{ctor: '[]'}),
+														_1: {ctor: '[]'}
+													}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$p,
+														{ctor: '[]'},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$button,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Events$onClick(_user$project$SKICoding$ResetGame),
+																	_1: {ctor: '[]'}
+																},
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html$text('Change Size'),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
+var _user$project$SKICoding$main = _elm_lang$html$Html$program(
+	{init: _user$project$SKICoding$init, view: _user$project$SKICoding$view, update: _user$project$SKICoding$update, subscriptions: _user$project$SKICoding$subscriptions})();
+var _user$project$SKICoding$Roll = {ctor: 'Roll'};
